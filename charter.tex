@@ -107,11 +107,14 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+\begin{consigna}{black}
+%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional.
+
+
+%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
 
 \begin{itemize}
 \item ¿Cómo se vincula este proyecto con la misión de la organización?
@@ -122,20 +125,20 @@ Puede ser útil incluir en esta sección la respuesta a alguna de estas pregunta
 \item ¿Por dónde pasa la innovación?
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-
+%La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal. Además se puede ver el sistema de control, almacenamiento y visualización, implementado con dashboard Thingsboard en un servidor centralizado, ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre y 50 centros de atención primaria de la salud.
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.7\textwidth]{./Figuras/bloquesgral.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+%El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
 \end{consigna}
 
 
@@ -201,7 +204,9 @@ Por ejemplo:
 \begin{consigna}{red}
 ¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+%Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+
+El propósito de este proyecto es minimizar los riesgos de pérdida de material, asegurando las condiciones legales ya que cualquier inconveniente en la estabilidad de las temperaturas, quedará guardado en el registro histórico y será inmediatamente reportado a través de mensajería por Telegram.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
