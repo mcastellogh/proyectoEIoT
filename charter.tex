@@ -183,15 +183,10 @@ Usuario final &      -             &      -        	&      -  	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+%Sería deseable listar a continuación de la tabla las principales características de cada interesado.
  
-Por ejemplo:
+%Por ejemplo:
 \begin{itemize}
 \item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
 \item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
@@ -206,9 +201,6 @@ Por ejemplo:
 \label{sec:proposito}
 
 \begin{consigna}{black}
-%¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-%Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
 
 El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, asegurando las condiciones legales exigidas por la autoridad.
 \end{consigna}
@@ -216,14 +208,38 @@ El propósito de este proyecto es poner en marcha un sistema de registro y visua
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+\begin{consigna}{black}
+El presente proyecto incluye el desarrollo de sus cuatro partes fundamentales.
+Sensores de temperatura.
+Estarán basados en microcontrolador ESP8266, los cuales proveen la capa física nativa para la conexión WiFi. El desarrollo del firmware incluirá las siguientes características:
+\begin{itemize}
+\item Capacidad de conectar distintos modelos de sensores de temperatura.
+\item Sensado de temperaturas de freezers (-17ºC) y heladeras (4ºC)
+\item Procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.
+\item Web server integrado para la configuración o visualización de parámetros.
+\item Actualización remota del firmware.
+\item Procesador de comandos para cambios de configuración on line desde el panel de visualización.
+\end{itemize}
+Transporte de los datos.
+Se instalará y configurará en un servidor con sistema operativo GNU/Linux con distribución Debian, la dashboard Thingsboard versión Community Edition que es la versión libre de licenciamientos pero que contiene todas las funcionalidades necesarias para este proyecto.
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+Visualización
+Se configurarán en la dashboard paneles para que proporcionen la siguiente información para cada dispositivo:
+\begin{itemize}
+\item Visualización de las temperaturas en tiempo real.
+\item Visualización mediante gráficas de la evolución de las temperaturas en el dominio del tiempo con entorno configurable.
+\item Visualización y configuración de los parámetros de alertas (rangos de temperatura).
+\item Visualización del estado del dispositivo (fuera de rango/offline).
+\item Visualización del lugar de emplazamiento del dispositivo.
+\item Visualización de fecha y Hora de  la última telemetría.
+\end{itemize}
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+Alarmas/alertas
+Se prevé la utilización de la API de Telegram para lo cual se configurará una cadena de reglas que filtre los dispositivos, confeccione los mensajes y finalmente a traves de HTTPS envíe la notificación.
+Se configurarán canales de Telegram para cada área/efector
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a internet y las conexiones a internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
+Los sensores desarrollados no son aptos para su instalación en equipos ultrafreezer (-70º).
 
 \end{consigna}
 
@@ -231,15 +247,16 @@ Explicitar además todo lo que no quede incluido (``El presente proyecto no incl
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+\begin{consigna}{black}
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item Las áreas donde se colocarán los sensores deberán disponer de una conexión a internet.
+\item Se utilizará la infraestructura de servidores de la red informática metropolitana de la ciudad de Rosario
+\item Los recursos humanos y el tiempo necesario para el desarollo, serán proporcionados por la Municipalidad de Rosario.
+\item El gasto producido por la compra de los elementos necesarios será proporcionado por la Municipalidad de Rosario.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
 \end{consigna}
 
 \section{4. Requerimientos}
@@ -252,16 +269,33 @@ PARTICIPACION DEL CLIENTE EN REQS
 PRIORIZARLOS
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos de hardware de los sensores
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
+	\item Microcontrolador en fase de producción activa
+	\item Microcontrolador con capa física WiFi	
+	\item Sensores primarios con rango de medición entre -50 y 100 ºC
+
 	\item Requerimiento 3 (prioridad menor)
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Requerimientos del software de los sensores
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item Configuración de parámetros específicos del nodo por pag web???
+	\item 
+
+	\end{enumerate}	
+\item Requerimientos de seguridad informática
+	\begin{enumerate}
+	\item La transmisión de la temperatura se deberá realizar con encriptación, utilizando para ello protocolos de seguridad.
+	\item Acceso a los sistemas con usuarios y contraseñas
+	\item 
+	\end{enumerate}	
+	requerimientos de lado usuarios
+	roles para distintos usurios jefe, operador, etc
+	visualizacion de las areas discriminadas or efector, distrito, o lo que sea
+\item Requerimientos de compras
+	\begin{enumerate}
+	\item Gestión de compras ágiles 
+	\item Posibilidad de realizar compras en el exterior
 	\end{enumerate}
 \end{enumerate}
 
