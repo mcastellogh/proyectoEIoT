@@ -110,23 +110,27 @@ Se adjunta a esta acta la planificación inicial.
 \begin{consigna}{black}
 %El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
 %Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+Los cortes de energía que se producen a menudo en la red eléctrica, afectan de manera directa el buen funcionamiento de los sistemas de refrigeración, sean de productos medicinales como de hemoproductos, pudiendo en algunos casos perder la cadena de frío con la consiguiente pérdida del material almacenado. Esto no sólo se traduce en pérdidas económicas, sino también implica que personas no puedan acceder a los tratamientos o vacunas con el consecuente impacto social y mediático que esto representa en una empresa pública. 
+Además la Administración Nacional de Medicamentos Alimentos y Tecnología Médica (ANMAT), a través de la disposición: "Reglamento Técnico Mercosur sobre Buenas Prácticas de Distribución de Productos Farmacéuticos", Resolución Mercosur GMC Nº 49/2002, define un conjunto de prácticas para el transporte y almacenamiento de productos farmacéuticos donde exige trazabilidad, equipamiento para el control y registro continuo de temperaturas con el fin de asegurar las condiciones ambientales de almacenamiento de tales productos. 
+La medición a distancia continua y en tiempo real de estas temperaturas sumado a un sistema de alerta, asegura las condiciones legales, minimiza los riesgos y garantiza la disponibilidad de hemoproductos seguros en el momento y el lugar en que se precise. Esto se enmarca en las políticas escenciales de la Secretaría de Salud Pública cuya misión es preservar la salud de la población, proponiendo un trabajo integrador para la construcción de opciones y entornos saludables.
 
-El presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional.
+Los equipos y software de que se dispone en plaza en su mayoría son de origen extranjero, y su utilización -además de onerosa- implica una dependencia con los fabricantes, en términos económicos pero también de criterios (en general se comercializan por módulos, no proveyendo soluciones integrales). En otras palabras, para trabajar con estos recursos se deben seguir criterios técnico-económicos diseñados para otras latitudes y otras condiciones. Se deben realizar adaptaciones y aproximaciones que implican tareas adicionales y que no siempre son del todo efectivas. El personal destinado a estas tareas debe entrenarse utilizando tiempo y esfuerzo, y este entrenamiento debe reforzarse cada vez que el propietario del sistema decide algún cambio o actualización. En el desarrollo de la presente idea, se ha pensado que tal vez este esfuerzo podría ser redirigido a tareas más provechosas.
+Se requiere entonces el desarrollo de tecnología propia destinada a este fin, que pueda ser adaptada a las necesidades de los investigadores locales, evitando la dependencia tecnológica en equipos y en software, y reduciendo en todo lo posible las erogaciones durante la investigación por este ítem.
 
+El presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional. 
 
+La solución propuesta se compone de las siguientes partes:
+\begin{itemize}
+\item Medición de la temperatura
+\item Transporte de los datos
+\item Lógica de control y persistencia de datos
+\item Visualización y alarmas
+\end{itemize}
 %Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
 
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
-\end{itemize}
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal. Además se puede ver el sistema de control, almacenamiento y visualización, implementado con dashboard Thingsboard en un servidor centralizado, ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre y 50 centros de atención primaria de la salud.
+En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal. Además se puede ver el sistema de almacenamiento y visualización implementado con un tablero de control  (dashboard) en un servidor centralizado, ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre y 50 centros de atención primaria de la salud.
 \vspace{25px}
 
 \begin{figure}[htpb]
@@ -164,13 +168,13 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
+\rowcolor[HTML]{C0C0C0} PERSONAS FISICAS
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
+Auspiciante   &                   &              	&    -    	\\ \hline
 Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Impulsor      & Roberto Collelo  & Secretaría de Salud Pública	& Bioingeniería\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+Colaboradores & Roberto Collelo  & Secretaría de Salud Pública	&Bioingeniería\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
 Equipo        & miembro1 \newline 
 				miembro2          &       -       	&      -  	\\ \hline
@@ -201,12 +205,12 @@ Por ejemplo:
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+\begin{consigna}{black}
+%¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
 %Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
 
-El propósito de este proyecto es minimizar los riesgos de pérdida de material, asegurando las condiciones legales ya que cualquier inconveniente en la estabilidad de las temperaturas, quedará guardado en el registro histórico y será inmediatamente reportado a través de mensajería por Telegram.
+El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, asegurando las condiciones legales exigidas por la autoridad.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
@@ -243,6 +247,9 @@ Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y
 
 \begin{consigna}{red}
 Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+NO USAR JERGAS NI ACRONIMOS BREVES CONSISOS
+PARTICIPACION DEL CLIENTE EN REQS
+PRIORIZARLOS
 
 \begin{enumerate}
 \item Grupo de requerimientos asociados con...
@@ -305,7 +312,7 @@ Cosas como:
 Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Grupo de tareas 1 BIBLIOGRAFIA POR EJEMPLO
 	\begin{enumerate}
 	\item Tarea 1 (tantas hs)
 	\item Tarea 2 (tantas hs)
