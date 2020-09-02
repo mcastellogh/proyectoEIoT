@@ -14,8 +14,8 @@
 \autor{Marcelo Castello} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Juan JoséSalerno}
+\pertenenciaDirector{Dirección de Bioingeniería} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -262,57 +262,84 @@ Para el desarrollo del presente proyecto se supone que:
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
-NO USAR JERGAS NI ACRONIMOS BREVES CONSISOS
-PARTICIPACION DEL CLIENTE EN REQS
-PRIORIZARLOS
+\begin{consigna}{black}
+Se presentan a continuación los requerimientos del proyecto, los mismos están presentados en funcionales y no funcionales, donde los ítems de cada requerimiento están priorizados por orden de aparición.
+
+Estos requerimientos se obtuvieron por:
+\begin{itemize}
+\item Relevamiento de las espectativas de los usuarios.
+\item Relevamiento de las condiciones impuestas por la empresa.
+\item Estudio de los elementos electrónicos disponibles en el mercado local y extranjero.
+\item Ordenanza de contabilidad de la Municipalidad de Rosario.
+\end{itemize}
 
 \begin{enumerate}
 \item Requerimientos de hardware de los sensores
 	\begin{enumerate}
-	\item Microcontrolador en fase de producción activa
-	\item Microcontrolador con capa física WiFi	
+	\item Microcontrolador en fase de producción activa.
+	\item Microcontrolador con capa física WiFi.	
 	\item Sensores primarios con rango de medición entre -50 y 100 ºC
-
-	\item Requerimiento 3 (prioridad menor)
+	\item Filtro activo de la entrada de temepratura.
+	\item Incorporación de leds de conexión y rango.
 	\end{enumerate}
+	
 \item Requerimientos del software de los sensores
 	\begin{enumerate}
-	\item Configuración de parámetros específicos del nodo por pag web???
-	\item 
-
+	\item Conjunto de parámetros que identifiquen de forma unívoca el sensor dentro del sistema.	
+	\item Almacenamiento en memoria no volátil de los parámetros.	
+	\item Configuración de parámetros específicos del sensor vía página web.
+	\item Actualización remota del firmware.
 	\end{enumerate}	
+	
 \item Requerimientos de seguridad informática
 	\begin{enumerate}
 	\item La transmisión de la temperatura se deberá realizar con encriptación, utilizando para ello protocolos de seguridad.
-	\item Acceso a los sistemas con usuarios y contraseñas
-	\item 
+	\item Acceso al sistema de visualización con usuario y contraseña.
+	\item Acceso a la página web del sensor con usuario y contraseña.
 	\end{enumerate}	
-	requerimientos de lado usuarios
-	roles para distintos usurios jefe, operador, etc
-	visualizacion de las areas discriminadas or efector, distrito, o lo que sea
+
+\item Requerimientos de los clientes
+	\begin{enumerate}
+	\item Existencia de roles para distintos usuarios.
+		\begin{enumerate}
+		\item Rol Administrador: podrá dar alta a usuarios y cambiar sus roles.
+	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de rangos y recibir alertas.
+	     \item Rol Operador: Sólo podrá visualizar series de tiempo y recibir alertas.
+	     \end{enumerate}
+	\item El sistema deberá prever la incorporación de otras variables a monitorear, que serán materia de desarrollos futuros de sensores.
+	\item Visualización de paneles basados en estructura jerarquica geográfica de la empresa.	
+	\item Escalabilidad en la implementación de nuevas áreas a monitorear.
+		\end{enumerate}
+		
+\item Requerimientos del sistema de visualización
+    \begin{enumerate}
+	\item Visualización de la temperatura.
+	\item Visualización del estado del dispositivo. (online/fuera de rango)
+	\item Visualización de la fecha y hora de la última telemetría enviada al servidor.
+	\item Visualización rápida de los sensores fuera de rango mediante plano en pantalla del área.
+	\item Visualización del histórico de alarmas.
+	\item Visualización de las series de tiempo de las temperaturas con selección del rango de tiempo a mostrar.
+	\end{enumerate}	
+
+\item Requerimientos de las alarmas
+	\begin{enumerate}
+	\item Dispensación de las alarmas por efector
+	 \end{enumerate}	 
+
 \item Requerimientos de compras
 	\begin{enumerate}
-	\item Gestión de compras ágiles 
-	\item Posibilidad de realizar compras en el exterior
+	\item Gestión de compras directas para elementos con presupuesto menor a {\$10.000}.
+	\item Posibilidad de realizar compras en el exterior.
 	\end{enumerate}
+	
+	\item Requierimientos de normativas
+	\begin{enumerate}
+	\item 
+	\item 
+	\end{enumerate}
+		
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
 
 \end{consigna}
 
