@@ -14,14 +14,14 @@
 \autor{Marcelo Castello} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Juan JoséSalerno}
+\director{Juan José Salerno}
 \pertenenciaDirector{Dirección de Bioingeniería} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Secretaría de Salud Pública}
+\cliente{Edgardo Marino}
 \empresaCliente{Municipalidad de Rosario}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
@@ -112,25 +112,25 @@ Se adjunta a esta acta la planificación inicial.
 %Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
 Los cortes de energía que se producen a menudo en la red eléctrica, afectan de manera directa el buen funcionamiento de los sistemas de refrigeración, sean de productos medicinales como de hemoproductos, pudiendo en algunos casos perder la cadena de frío con la consiguiente pérdida del material almacenado. Esto no sólo se traduce en pérdidas económicas, sino también implica que personas no puedan acceder a los tratamientos o vacunas con el consecuente impacto social y mediático que esto representa en una empresa pública. 
 Además la Administración Nacional de Medicamentos Alimentos y Tecnología Médica (ANMAT), a través de la disposición: "Reglamento Técnico Mercosur sobre Buenas Prácticas de Distribución de Productos Farmacéuticos", Resolución Mercosur GMC Nº 49/2002, define un conjunto de prácticas para el transporte y almacenamiento de productos farmacéuticos donde exige trazabilidad, equipamiento para el control y registro continuo de temperaturas con el fin de asegurar las condiciones ambientales de almacenamiento de tales productos. 
-La medición a distancia continua y en tiempo real de estas temperaturas sumado a un sistema de alerta, asegura las condiciones legales, minimiza los riesgos y garantiza la disponibilidad de hemoproductos seguros en el momento y el lugar en que se precise. Esto se enmarca en las políticas escenciales de la Secretaría de Salud Pública cuya misión es preservar la salud de la población, proponiendo un trabajo integrador para la construcción de opciones y entornos saludables.
+La medición a distancia continua y en tiempo real de estas temperaturas sumado a un sistema de alerta, aseguran las condiciones legales, minimizan los riesgos y garantizan la disponibilidad de hemoproductos seguros en el momento y el lugar en que se precise. Esto se enmarca en las políticas escenciales de la Secretaría de Salud Pública cuya misión es preservar la salud de la población, proponiendo un trabajo integrador para la construcción de opciones y entornos saludables.
 
 Los equipos y software de que se dispone en plaza en su mayoría son de origen extranjero, y su utilización -además de onerosa- implica una dependencia con los fabricantes, en términos económicos pero también de criterios (en general se comercializan por módulos, no proveyendo soluciones integrales). En otras palabras, para trabajar con estos recursos se deben seguir criterios técnico-económicos diseñados para otras latitudes y otras condiciones. Se deben realizar adaptaciones y aproximaciones que implican tareas adicionales y que no siempre son del todo efectivas. El personal destinado a estas tareas debe entrenarse utilizando tiempo y esfuerzo, y este entrenamiento debe reforzarse cada vez que el propietario del sistema decide algún cambio o actualización. En el desarrollo de la presente idea, se ha pensado que tal vez este esfuerzo podría ser redirigido a tareas más provechosas.
 Se requiere entonces el desarrollo de tecnología propia destinada a este fin, que pueda ser adaptada a las necesidades de los investigadores locales, evitando la dependencia tecnológica en equipos y en software, y reduciendo en todo lo posible las erogaciones durante la investigación por este ítem.
 
-El presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional. 
+El presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, quien eventualmente, nos ofrece un portal para poder hacer una visualización, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional. 
 
 La solución propuesta se compone de las siguientes partes:
 \begin{itemize}
 \item Medición de la temperatura
 \item Transporte de los datos
-\item Lógica de control y persistencia de datos
+\item Lógica de procesamiento y persistencia de datos
 \item Visualización y alarmas
 \end{itemize}
 %Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
 
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal. Además se puede ver el sistema de almacenamiento y visualización implementado con un tablero de control  (dashboard) en un servidor centralizado, ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre y 50 centros de atención primaria de la salud.
+En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal. Además se puede ver el sistema de almacenamiento y visualización implementado con un tablero de control  (dashboard) en un servidor centralizado ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre y 50 centros de atención primaria de la salud.
 \vspace{25px}
 
 \begin{figure}[htpb]
@@ -149,37 +149,41 @@ En la figura 1 se observa un diagrama en bloques general del sistema, donde se a
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} 
+\begin{consigna}{black} 
 %Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
  
 %Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
  
 %Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
 
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
+%\begin{itemize}
+%\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
+%\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
+%\end{itemize}
 
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+%Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} PERSONAS FISICAS
+\rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&    -    	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      & Roberto Collelo  & Secretaría de Salud Pública	& Bioingeniería\\ \hline
+%Auspiciante   &                   &              	&    -    	\\ \hline
+Cliente       & \clientename      &\empclientename	&      Director de Bioingeniería\\ \hline
+Impulsor      & Roberto Collelo  & Secretaría de Salud Pública	&Sub Director de Bioingeniería\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores & Roberto Collelo  & Secretaría de Salud Pública	&Bioingeniería\\ \hline
+Colaboradores & Roberto Collelo\newline
+                Silvana Pereyra
+                                  & Secretaría de Salud Pública\newline
+                                  Dirección Centros de Salud	&Sub Director de Bioingeniería\newline %Jefa Droguería Central
+ \\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &       -       	&      -  	\\ \hline
-Opositores    &    -               &      -        	&     -   	\\ \hline
-Usuario final &      -             &      -        	&      -  	\\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2          &       -       	&      -  	\\ \hline
+%Opositores    &    -               &      -        	&     -   	\\ \hline
+%Usuario final &      -             &      -        	&      -  	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -188,9 +192,13 @@ Usuario final &      -             &      -        	&      -  	\\ \hline
  
 %Por ejemplo:
 \begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+%\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+%\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+\item Colaboradores
+
+Roberto Collelo, resulta de valiosa ayuda en el desarrollo del firmware de los sensores.
+
+Silvana Pereyra, su intervención será desde el lado usuarios, ya que se muestra como una facilitadora para la implementación del sistema.
 \end{itemize}
 
 \end{consigna}
@@ -201,7 +209,6 @@ Usuario final &      -             &      -        	&      -  	\\ \hline
 \label{sec:proposito}
 
 \begin{consigna}{black}
-
 El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, asegurando las condiciones legales exigidas por la autoridad.
 \end{consigna}
 
@@ -209,37 +216,24 @@ El propósito de este proyecto es poner en marcha un sistema de registro y visua
 \label{sec:alcance}
 
 \begin{consigna}{black}
-El presente proyecto incluye el desarrollo de sus cuatro partes fundamentales.
-Sensores de temperatura.
-Estarán basados en microcontrolador ESP8266, los cuales proveen la capa física nativa para la conexión WiFi. El desarrollo del firmware incluirá las siguientes características:
-\begin{itemize}
-\item Capacidad de conectar distintos modelos de sensores de temperatura.
-\item Sensado de temperaturas de freezers (-17ºC) y heladeras (4ºC)
-\item Procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.
-\item Web server integrado para la configuración o visualización de parámetros.
-\item Actualización remota del firmware.
-\item Procesador de comandos para cambios de configuración on line desde el panel de visualización.
-\end{itemize}
-Transporte de los datos.
+El presente proyecto incluye el desarrollo de sus partes fundamentales para que sea capaz de tener una vigilancia de temperatura de al menos 4 heladeras pertenecientes a distintos efectores de salud de la ciudad de Rosario. 
+Para ello se desarrollarán y producirán las placas de circuito impreso para los sensores de temperatura, se integrarán en una caja plástica para poder ser colocados en el equipamiento a monitorear.
+
 Se instalará y configurará en un servidor con sistema operativo GNU/Linux con distribución Debian, la dashboard Thingsboard versión Community Edition que es la versión libre de licenciamientos pero que contiene todas las funcionalidades necesarias para este proyecto.
 
-Visualización
-Se configurarán en la dashboard paneles para que proporcionen la siguiente información para cada dispositivo:
-\begin{itemize}
-\item Visualización de las temperaturas en tiempo real.
-\item Visualización mediante gráficas de la evolución de las temperaturas en el dominio del tiempo con entorno configurable.
-\item Visualización y configuración de los parámetros de alertas (rangos de temperatura).
-\item Visualización del estado del dispositivo (fuera de rango/offline).
-\item Visualización del lugar de emplazamiento del dispositivo.
-\item Visualización de fecha y Hora de  la última telemetría.
-\end{itemize}
+Se configurarán reglas en la dashboard para comparar las temperaturas de los dispositivos con sus rangos para así originar las alarmas y enviar las notificaciones.
 
-Alarmas/alertas
-Se prevé la utilización de la API de Telegram para lo cual se configurará una cadena de reglas que filtre los dispositivos, confeccione los mensajes y finalmente a traves de HTTPS envíe la notificación.
-Se configurarán canales de Telegram para cada área/efector
+Se instalará una base de datos en el servidor central donde se almacenarán las temperaturas, y las configuraciones del sistema.
+
+Se configurarán en la dashboard paneles para que proporcionen información de temperatura y estado para cada dispositivo conectado al sistema.
+
+Las notificaciones de alarmas se harán por medio de la red Telegram, configurando un canal para cada efector/área.
+
 
 El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a internet y las conexiones a internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
 Los sensores desarrollados no son aptos para su instalación en equipos ultrafreezer (-70º).
+Los sensores no almacenarán los valores de temperaruras en memorias externas tipo SD ni en la memoria interna del microcontrolador.
+Los sensores no usarán baterías para su funcionamiento.
 
 \end{consigna}
 
@@ -252,7 +246,7 @@ Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
 \item Las áreas donde se colocarán los sensores deberán disponer de una conexión a internet.
-\item Se utilizará la infraestructura de servidores de la red informática metropolitana de la ciudad de Rosario
+\item Para la puesta en producción, se utilizará la infraestructura de servidores de la red informática metropolitana de la ciudad de Rosario
 \item Los recursos humanos y el tiempo necesario para el desarollo, serán proporcionados por la Municipalidad de Rosario.
 \item El gasto producido por la compra de los elementos necesarios será proporcionado por la Municipalidad de Rosario.
 \end{itemize}
@@ -268,7 +262,7 @@ Se presentan a continuación los requerimientos del proyecto, los mismos están 
 Estos requerimientos se obtuvieron por:
 \begin{itemize}
 \item Relevamiento de las espectativas de los usuarios.
-\item Relevamiento de las condiciones impuestas por la empresa.
+\item Relevamiento de las condiciones impuestas por el cliente.
 \item Estudio de los elementos electrónicos disponibles en el mercado local y extranjero.
 \item Ordenanza de contabilidad de la Municipalidad de Rosario.
 \end{itemize}
@@ -279,16 +273,18 @@ Estos requerimientos se obtuvieron por:
 	\item Microcontrolador en fase de producción activa.
 	\item Microcontrolador con capa física WiFi.	
 	\item Sensores primarios con rango de medición entre -50 y 100 ºC
-	\item Filtro activo de la entrada de temepratura.
-	\item Incorporación de leds de conexión y rango.
+	\item Filtro activo de la entrada de temperatura.
+	\item Incorporación de leds de conexión y rango.	
 	\end{enumerate}
 	
 \item Requerimientos del software de los sensores
 	\begin{enumerate}
 	\item Conjunto de parámetros que identifiquen de forma unívoca el sensor dentro del sistema.	
-	\item Almacenamiento en memoria no volátil de los parámetros.	
+	\item Almacenamiento en memoria no volátil de los parámetros.
+	\item Procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.	
 	\item Configuración de parámetros específicos del sensor vía página web.
 	\item Actualización remota del firmware.
+    \item Capacidad de conectar distintos modelos de sensores de temperatura.
 	\end{enumerate}	
 	
 \item Requerimientos de seguridad informática
@@ -298,12 +294,12 @@ Estos requerimientos se obtuvieron por:
 	\item Acceso a la página web del sensor con usuario y contraseña.
 	\end{enumerate}	
 
-\item Requerimientos de los clientes
+\item Requerimientos del cliente
 	\begin{enumerate}
 	\item Existencia de roles para distintos usuarios.
 		\begin{enumerate}
 		\item Rol Administrador: podrá dar alta a usuarios y cambiar sus roles.
-	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de rangos y recibir alertas.
+	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de tiempo y recibir alertas.
 	     \item Rol Operador: Sólo podrá visualizar series de tiempo y recibir alertas.
 	     \end{enumerate}
 	\item El sistema deberá prever la incorporación de otras variables a monitorear, que serán materia de desarrollos futuros de sensores.
@@ -316,14 +312,21 @@ Estos requerimientos se obtuvieron por:
 	\item Visualización de la temperatura.
 	\item Visualización del estado del dispositivo. (online/fuera de rango)
 	\item Visualización de la fecha y hora de la última telemetría enviada al servidor.
+	\item Visualización y configuración de los parámetros de alertas (rangos de temperatura).
 	\item Visualización rápida de los sensores fuera de rango mediante plano en pantalla del área.
 	\item Visualización del histórico de alarmas.
-	\item Visualización de las series de tiempo de las temperaturas con selección del rango de tiempo a mostrar.
+    \item Visualización mediante gráficas de la evolución de las temperaturas en el dominio del tiempo con entorno configurable.
+    \item Visualización del lugar de emplazamiento del dispositivo.
 	\end{enumerate}	
+    
 
 \item Requerimientos de las alarmas
 	\begin{enumerate}
-	\item Dispensación de las alarmas por efector
+	\item Dispensación de las alarmas por efector/área.
+	\item Notificaciones ante desplazamientos de la temperatura por encima del rango.
+	\item Notificaciones ante desplazamientos de la temperatura por debajo del rango.
+	\item Notificaciones ante desconexiones del dispositivo sensor.
+	\item Notificaciones ante recupero de la conexión del dispositivo sensor.
 	 \end{enumerate}	 
 
 \item Requerimientos de compras
@@ -353,12 +356,12 @@ Descripción: En esta sección se deben incluir las historias de usuarios y su p
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
+\begin{consigna}{black}
 \begin{itemize}
 \item Manual de uso
 \item Diagrama esquemático
-\item Código fuente
+\item 4 placas de PCB sensores de temperatura con el firware instalado y configurado.
+\item Imagen del servidor central con todos los servicios, programas y configuraciones correspondientes.
 \item Diagrama de instalación
 \item Informe final
 
@@ -375,17 +378,20 @@ Se recomienda mostrar el WBS mediante una lista indexada:
 \begin{enumerate}
 \item Grupo de tareas 1 BIBLIOGRAFIA POR EJEMPLO
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Aprendizaje uso de Thingsboard
+	\item Relevamiento
+	\item Selección de efectores donde colocar los proptotipos
+	\item seleccion de usuarios que harán las pruebas del prototipo
+	\item charlas de sensibilización con los usuarios seleccionados
+	
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Desarrollo del circuito electrónico y PCB del sensor
 	\begin{enumerate}
 	\item Tarea 1 (tantas hs)
 	\item Tarea 2 (tantas hs)
 	\item Tarea 3 (tantas hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item Desarrollo del firmware del sensor
 	\begin{enumerate}
 	\item Tarea 1 (tantas hs)
 	\item Tarea 2 (tantas hs)
@@ -393,6 +399,42 @@ Se recomienda mostrar el WBS mediante una lista indexada:
 	\item Tarea 4 (tantas hs)
 	\item Tarea 5 (tantas hs)
 	\end{enumerate}
+\item Instalación y configuración del sitema operativo del servidor central
+	\begin{enumerate}
+	\item Tarea 1 (tantas hs)
+	\item Tarea 2 (tantas hs)
+	\item Tarea 3 (tantas hs)
+	\item Tarea 4 (tantas hs)
+	\item Tarea 5 (tantas hs)
+	\end{enumerate}	
+	
+\item Instalación y configuración de la dashboard en el servidor central
+	\begin{enumerate}
+	\item Tarea 1 (tantas hs)
+	\item Tarea 2 (tantas hs)
+	\item Tarea 3 (tantas hs)
+	\item Tarea 4 (tantas hs)
+	\item Tarea 5 (tantas hs)
+	\end{enumerate}		
+	
+\item Gestión de las notificaciones
+	\begin{enumerate}
+	\item creación de canales en Telegram
+	\item instalacion de app telegram en usuarios seleccionados para prueba
+	\item Tarea 3 (tantas hs)
+	\item Tarea 4 (tantas hs)
+	\item Tarea 5 (tantas hs)
+	\end{enumerate}		
+
+\item Verificación de todas las fucionalidades
+	\begin{enumerate}
+	\item Verificación del cumplimiento de los requerimientos
+	\item instalacion de app telegram en usuarios seleccionados para prueba
+	\item Tarea 3 (tantas hs)
+	\item Tarea 4 (tantas hs)
+	\item Tarea 5 (tantas hs)
+	\end{enumerate}		
+	
 \end{enumerate}
 
 Cantidad total de horas: (tantas hs)
