@@ -342,11 +342,11 @@ Estos requerimientos se obtuvieron por:
 	\item Se deberán realizar las gestiones correspondiente para realizar compras en el exterior.
 	\end{enumerate}
 	
-	\item Requierimientos de normativas
-	\begin{enumerate}
-	\item 
-	\item 
-	\end{enumerate}
+%\item Requierimientos de normativas
+%	\begin{enumerate}
+%	\item 
+%	\item 
+%	\end{enumerate}
 		
 \end{enumerate}
 
@@ -356,8 +356,96 @@ Estos requerimientos se obtuvieron por:
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+\begin{consigna}{black}
+%Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Se muestran a continuación, las historias de usuarios recopiladas. Al principio se presentan dos épicas y sus correspondientes desgloses emanadas de las máximas autoridades de la empresa.
+La ponderación de estas historias se realizó teniendo en cuenta la complejidad y el tiempo necesario en resolverlas (criterios complejidad-volumen). Se elijió para la ello una escala basada en la serie de Fibonacci desde el 0 al 13, donde el 0 representa poco esfuerzo y el 13 alto esfuerzo para lograr el objetivo.
+
+Luego, se les asignó una prioridad de resolución, teniendo como premisa que el sistema funcione de forma ininterrumpida. Si el sistema funciona como es debido, se podrán cumplir con las funcionalidades primarias que son la de vigilar las temperaturas, luego vendrán las otras funcionalidades: emisión de alertas, visualización, etc.
+
+
+\begin{itemize}
+\item EPICA Como Secretario de Salud Pública Municipal, necesito estar seguro de la buena conservación de las vacunas, para poder informar al estado provincial y nacional la disponibilidad de las mismas.
+
+Desglose
+	\begin{itemize}
+	\item 
+    Como secretario de Salud Pública Municipal deseo poder visualizar en cualquier momento la temperatura de cualquier heladera con el objetivo de asegurarse de que no se deterioren
+	\end{itemize}
+	\begin{itemize}
+	\item 
+	Como secretario de Salud Pública Municipal deseo poder recibir una alarma si alguna de las heladeras superan la temperatura de 4 grados centígrados con el objetivo de poder actuar rápidamente y no se deterioren las vacunas
+	\end{itemize}
+
+	\begin{itemize}
+	\item 
+	Como secretario de Salud Pública Municipal deseo poder visualizar en cualquier momento cuántas vacunas hay por heladera con el fin de saber si se pueden reubicar vacunas ante una eventual falla de alguna heladera
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item EPICA Como Director de Infraestructura Hospitalaria, deseo visualizar mendiante un mapa interactivo, si algún efector de la red presenta problemas en los refrigeradores críticos y así direccionar las acciones necesarias para su correción.
+\end{itemize}
+
+\begin{itemize}
+\item EPICA Como Director de Infraestructura Hospitalaria, deseo que a este sistema se le puedadn adicionar otras variables físicas para tener un panel de control completo de todos 
+\end{itemize}
+
+
+\begin{itemize}
+\item Como responsable de mantenimiento necesito conocer la evolución de las temperaturas de los refirgeradores en los últimos 6 meses, para estimar las intervenciones preventivas en tales equipos.
+\end{itemize}
+
+
+\begin{itemize}
+\item Como operario de mantenimiento necesito que el sistema me envíe inmediatamente un alerta a mi teléfono si hay algún apartamiento de temperaturas, para solucionar rápidamente el desperfecto.
+\end{itemize}
+
+
+\begin{itemize}
+\item Como encargado de mantenimiento electrónico, necesito saber cuándo un sensor deja de funcionar para inmediatamente proceder a su reparación.
+\end{itemize}
+
+\begin{itemize}
+\item Como encargado de mantenimiento electrónico, necesito poder visualizar el último dato de temperatura enviado al servidor para 
+\end{itemize}
+
+
+\begin{itemize}
+\item Como jefe de seguridad informática, necesito que la comunicación de los sensores se haga con mecanismos de encriptación, para proteger los datos de posibles cambios por intromisiones no desadas.
+\end{itemize}
+
+
+\begin{itemize}
+\item Como Director de farmacia desearía que el acceso al sistema de visualización sea con usuario y contraseña para poder definir roles de usuarios.
+\end{itemize}
+
+
+\begin{itemize}
+\item Como director de Bioingeniería, debería tener acceso a los datos históricos de temperatura para evaluar el funcionamiento a largo plazo de los equipos de refrigeración.
+\end{itemize}
+
+\begin{itemize}
+\item Como director de Bioingeniería, desearía poder visualizar una tabla con los históricos de alarmas para evaluar la cantidad de fallos del equipo de refrigeración.
+\end{itemize}
+
+
+\begin{itemize}
+\item Como jefa de droguería, necesito tener en pantalla el histórico de temperaturas para visualizar si los productos perdieron la cadena de frío.
+\end{itemize}
+
+\begin{itemize}
+\item Como jefa de droguería, necesito tener acceso a cambiar los rangos de temperatura para poder almacenar diferentes productos en diferentes refrigeradores según las necesidades.
+\end{itemize}
+
+\begin{itemize}
+\item Como técnico hemoterapista de guardia, necesito obtener el reporte de las últimas 24 hs de temperaturas para entregar mi guardia con los productos asegurados en su cadena de frio.
+\end{itemize}
+
+\begin{itemize}
+\item Como operario de droguería, necesito que el sistema registre las temperaturas cada 10 minutos para evitar los olvidos y las impresiciones del registro manual.
+\end{itemize}
+
 \end{consigna}
 
 \section{5. Entregables principales del proyecto}
