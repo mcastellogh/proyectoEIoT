@@ -359,6 +359,7 @@ Estos requerimientos se obtuvieron por:
 \begin{consigna}{black}
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 Se muestran a continuación, las historias de usuarios recopiladas. Al principio se presentan dos épicas y sus correspondientes desgloses emanadas de las máximas autoridades de la empresa.
+
 La ponderación de estas historias se realizó teniendo en cuenta la complejidad y el tiempo necesario en resolverlas (criterios complejidad-volumen). Se elijió para la ello una escala basada en la serie de Fibonacci desde el 0 al 13, donde el 0 representa poco esfuerzo y el 13 alto esfuerzo para lograr el objetivo. 
 
 La siguiente tabla muestra la clasificación de las funcionalidades observadas y su ponderación.
@@ -375,11 +376,11 @@ Visualización de temperatura & 0\\ \hline
 Gráficas en tiempo real & 1\\ \hline
 Gráficas históricas, alarmas, estados & 3\\ \hline
 Mapas, seguridad & 5\\ \hline
-No previsto en este proyecto & 13\\ \hline
+Fuera del alcance de este proyecto & 13\\ \hline
 
 \end{tabularx}
 \end{table}
-Luego, se les asignó una prioridad de resolución, (ver tabla) teniendo como premisa que el sistema funcione de forma ininterrumpida. Si el sistema funciona como es debido, se podrán cumplir con las funcionalidades primarias que son la de vigilar, notificar, dar seguridad y visualizar, luego vendrán las otras funcionalidades: emisión de alertas, visualización, etc.
+Luego, se les asignó una prioridad de resolución, teniendo como prioridad fundamental que el sistema funcione de forma ininterrumpida. Esto se aprecia en la siguiente tabla.
 
 \begin{table}[ht]
 %caption{Tabla de prioridades}
@@ -389,14 +390,14 @@ Luego, se les asignó una prioridad de resolución, (ver tabla) teniendo como pr
 \rowcolor[HTML]{C0C0C0}
 Funciones           & Prioridad 	\\ \hline
 Inherentes a la robustez del sistema & 1 \\ \hline
-Inherentes a las notificaciones & 2 \\ \hline
-Inherentes a la seguridad & 3 \\ \hline
-Inherentes a la visualización de datos &4 \\ \hline
-
+Inherentes a las notificaciones, registros y configuraciones& 2 \\ \hline
+Inherentes a la visualización de datos &3 \\ \hline
+Inherentes a la seguridad & 4 \\ \hline
+Sin prioridad & 5 \\ \hline
 \end{tabularx}
 \end{table}
 
-
+Descripción de las historias de usuarios
 
 
 \begin{itemize}
@@ -405,23 +406,23 @@ Inherentes a la visualización de datos &4 \\ \hline
 Desglose
 	\begin{itemize}
 	\item 
-    Como secretario de Salud Pública Municipal deseo poder visualizar en cualquier momento la temperatura de cualquier heladera con el objetivo de asegurarse de que no se deterioren. 
+    Como secretario de Salud Pública Municipal deseo poder visualizar en cualquier momento la temperatura de cualquier heladera con el objetivo de asegurar que no se deteriore su contenido. 
     
-Ponderación: 0 Prioridad:
+Ponderación:0 Prioridad:3
 	\end{itemize}
 	
 	\begin{itemize}
 	\item 
-	Como secretario de Salud Pública Municipal deseo poder recibir una alarma si alguna de las heladeras superan la temperatura de 4 grados centígrados con el objetivo de poder actuar rápidamente y no se deterioren las vacunas. 
+	Como secretario de Salud Pública Municipal deseo poder recibir una alarma si alguna de las heladeras superan la temperatura de 4 grados centígrados con el objetivo de poder actuar rápidamente y que no se deterioren las vacunas. 
 	
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:2
 	\end{itemize}
 
 	\begin{itemize}
 	\item 
 	Como secretario de Salud Pública Municipal deseo poder visualizar en cualquier momento cuántas vacunas hay por heladera con el fin de saber si se pueden reubicar vacunas ante una eventual falla de alguna heladera. 
 
-Ponderación: 13 Prioridad:
+Ponderación:13 Prioridad:5
 	\end{itemize}
 \end{itemize}
 
@@ -433,13 +434,13 @@ Desglose
 	\begin{itemize}
 	\item Como Director de Infraestructura Hospitalaria, necesito visualizar mendiante un mapa interactivo el estado de todos los refrigeradores para poder diagramar las acciones de corrección necesarias.  
 
-Ponderación: 5 Prioridad:
+Ponderación:5 Prioridad:3
 	\end{itemize}
 
 	\begin{itemize}
 	\item Como Director de Infraestructura Hospitalaria, necesito recibir notificaciones de las anomalías de los equipos de refrigeración para poder indagar a los responsables de la situación.  
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:3
 	\end{itemize}
 
 \end{itemize}
@@ -451,15 +452,15 @@ Ponderación: 3 Prioridad:
 Desglose
 
 	\begin{itemize}
-	\item Como Director de Infraestructura Hospitalaria, deseo conoder el nivel de los tanques de agua de todos los efectores de la Municipalidad, para  
+	\item Como Director de Infraestructura Hospitalaria, deseo conoder el nivel de los tanques de agua de todos los efectores de la Municipalidad, para prevenir posibles faltantes de este elemento primordial.
 	
-Ponderación: 13 Prioridad:
+Ponderación: 13 Prioridad:5
 	\end{itemize}
 
 	\begin{itemize}
-	\item Como Director de Infraestructura Hospitalaria, deseo conoder el estado de los filtros HEPA de los equipos de aire acondicionado de todos los efectores de la Municipalidad, para 
+	\item Como Director de Infraestructura Hospitalaria, deseo conoder el estado de los filtros HEPA de los equipos de aire acondicionado de todos los efectores de la Municipalidad, para poder programar su compra y recambio.
 	
-Ponderación: 13 Prioridad:
+Ponderación: 13 Prioridad:5
 	\end{itemize}
 
 \end{itemize}
@@ -467,79 +468,79 @@ Ponderación: 13 Prioridad:
 \begin{itemize}
 \item Como responsable de mantenimiento necesito conocer la evolución de las temperaturas de los refirgeradores en los últimos 6 meses, para estimar las intervenciones preventivas en tales equipos. 
 
-Ponderación: 3 Prioridad:
+Ponderación: 3 Prioridad:3
 \end{itemize}
 
 
 \begin{itemize}
 \item Como operario de mantenimiento necesito que el sistema me envíe inmediatamente un alerta a mi teléfono si hay algún apartamiento de temperaturas, para solucionar rápidamente el desperfecto. 
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:2
 \end{itemize}
 
 
 \begin{itemize}
 \item Como encargado de mantenimiento electrónico, necesito saber cuándo un sensor deja de funcionar para inmediatamente proceder a su reparación. 
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:1
 \end{itemize}
 
 \begin{itemize}
 \item Como encargado de mantenimiento electrónico, necesito poder visualizar el último dato de temperatura enviado al servidor para comprobar la completitud de los datos almacenados
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:1
 \end{itemize}
 
 
 \begin{itemize}
 \item Como jefe de seguridad informática, necesito que la comunicación de los sensores se haga con mecanismos de encriptación, para proteger los datos de posibles cambios por intromisiones no desadas. 
 
-Ponderación: 5 Prioridad:
+Ponderación:5 Prioridad:4
 \end{itemize}
 
 
 \begin{itemize}
 \item Como Director de farmacia desearía que el acceso al sistema de visualización sea con usuario y contraseña para poder definir roles de usuarios. 
 
-Ponderación: 5 Prioridad:
+Ponderación:5 Prioridad:4
 \end{itemize}
 
 
 \begin{itemize}
 \item Como director de Bioingeniería, debería tener acceso a los datos históricos de temperatura para evaluar el funcionamiento a largo plazo de los equipos de refrigeración. 
 
-Ponderación:3 Prioridad:
+Ponderación:3 Prioridad:3
 \end{itemize}
 
 \begin{itemize}
-\item Como director de Bioingeniería, desearía poder visualizar una tabla con los históricos de alarmas para evaluar la cantidad de fallos del equipo de refrigeración. 
+\item Como director de Bioingeniería, desearía poder visualizar una tabla con los históricos de alarmas para evaluar la cantidad de fallos de los equipos de refrigeración. 
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:3
 \end{itemize}
 
 
 \begin{itemize}
-\item Como jefa de droguería, necesito tener en pantalla el histórico de temperaturas de la última semana para visualizar si los productos perdieron la cadena de frío. 
+\item Como jefa de droguería, necesito tener en pantalla el registro histórico de temperaturas de la última semana para visualizar si los productos perdieron la cadena de frío. 
 
-Ponderación: 1 Prioridad:
+Ponderación:1 Prioridad:2
 \end{itemize}
 
 \begin{itemize}
 \item Como jefa de droguería, necesito tener acceso a cambiar los rangos de temperatura para poder almacenar diferentes productos en diferentes refrigeradores según las necesidades. 
 
-Ponderación: 3 Prioridad:
+Ponderación:3 Prioridad:2
 \end{itemize}
 
 \begin{itemize}
-\item Como técnico hemoterapista de guardia, necesito obtener el reporte de las últimas 24 hs de temperaturas para entregar mi guardia con los productos asegurados en su cadena de frio. 
+\item Como técnico hemoterapista de guardia, necesito obtener el registro de las últimas 24 hs de temperaturas para entregar mi guardia con los productos asegurados en su cadena de frio. 
 
-Ponderación:1 Prioridad:
+Ponderación:1 Prioridad:2
 \end{itemize}
 
 \begin{itemize}
 \item Como operario de droguería, necesito que el sistema registre las temperaturas cada 10 minutos para evitar los olvidos y las impresiciones del registro manual. 
 
-Ponderación: 0 Prioridad:
+Ponderación:0 Prioridad:2
 \end{itemize}
 
 \end{consigna}
