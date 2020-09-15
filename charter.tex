@@ -15,7 +15,7 @@
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Juan José Salerno}
-\pertenenciaDirector{Dirección de Bioingeniería} 
+\pertenenciaDirector{Universidad Tecnológica Nacional - Facultad Regional Rosario} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -64,8 +64,8 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento \newline Versión inicial: propósito, alcance, supuestos, requerimientos, entregables y desglose del trabajo.
                                          & 26/08/2020 \\ \hline
-%1.1      &                                                                 & dd/mm/aaaa \\ \hline
-%1.2      & Otro ejemplo \newline
+1.2      & Primera entrega                                                                 & 04/09/2020 \\ \hline
+1.3      & Primera corrección &15/06/2020\\\hline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
 %		   A propósito                                                     & dd/mm/aaaa \\ \hline
@@ -111,23 +111,25 @@ Se adjunta a esta acta la planificación inicial.
 \begin{consigna}{black}
 %El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
 %Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
-El buen funcionamiento de los sistemas de refrigeración es afectado a menudo por cortes de energía, mermas en el rendimiento del equipo compresor, o pérdidas en el sello ya sea por desgaste de burletes o puertas no bien cerradas.
-En el área de salud esto resulta crítico. Productos medicinales como hemoproductos o vacunas, pueden perder la eficacia médica. Esto no sólo se traduce en pérdidas económicas, sino también implica que los tratamientos sobre las personas pueden no ser efectivos o que no puedan ser accedidos por la pérdida del material, con el consecuente impacto social y mediático que esto representa en una empresa pública. 
+El presente proyecto, está dirigido a solucionar un problema existente en la Municipalidad de Rosario, donde en el área Salud Pública, funcionan  hospitales, centros de salud, droguerías y bancos de sangre. Todos estos efectores necesitan para almacenar los insumos médicos sistemas de refrigeración que provean alta confiabilidad en su prestación.
+
+El buen funcionamiento de estos sistemas es afectado a menudo por cortes de energía, mermas en el rendimiento del equipo compresor, o pérdidas en el sello ya sea por desgaste de burletes o puertas mal cerradas.
+En el área de salud esto resulta crítico. Productos medicinales como hemoproductos o vacunas, pueden perder la eficacia médica. Esto no sólo se traduce en pérdidas económicas, sino también implica que los tratamientos sobre las personas pueden no ser efectivos o que no puedan ser accedidos por la pérdida del material, con el consecuente impacto social y mediático que esto representa para el municipio.
 
 %Los cortes de energía que se producen a menudo en la red eléctrica afectan de manera directa el buen funcionamiento de los sistemas de refrigeración, sean de productos medicinales como de hemoproductos, pudiendo en algunos casos perder la cadena de frío con la consiguiente pérdida del material almacenado. Esto no sólo se traduce en pérdidas económicas, sino también implica que personas no puedan acceder a los tratamientos o vacunas con el consecuente impacto social y mediático que esto representa en una empresa pública. 
-Además la Administración Nacional de Medicamentos Alimentos y Tecnología Médica (ANMAT), a través de la disposición: "Reglamento Técnico Mercosur sobre Buenas Prácticas de Distribución de Productos Farmacéuticos", Resolución Mercosur GMC Nº 49/2002, define un conjunto de prácticas para el transporte y almacenamiento de productos farmacéuticos donde exige trazabilidad, equipamiento para el control y registro continuo de temperaturas con el fin de asegurar las condiciones ambientales de almacenamiento de tales productos. 
+Además, la Administración Nacional de Medicamentos Alimentos y Tecnología Médica (ANMAT), a través de la disposición: "Reglamento Técnico Mercosur sobre Buenas Prácticas de Distribución de Productos Farmacéuticos", Resolución Mercosur GMC Nº 49/2002, define un conjunto de prácticas para el transporte y almacenamiento de productos farmacéuticos donde exige trazabilidad, equipamiento para el control y registro continuo de temperaturas con el fin de asegurar las condiciones ambientales de almacenamiento de tales productos. 
 
 La medición a distancia continua y en tiempo real de estas temperaturas sumado a un sistema de alerta, aseguran las condiciones legales, minimizan los riesgos y garantizan la disponibilidad de hemoproductos y vacunas seguros en el momento y el lugar en que se precise. 
 
 Este tabajo se enmarca en dos premisas fundamentales:
 \begin{itemize}
-\item Las políticas escenciales de la Secretaría de Salud Pública cuya misión es preservar la salud de la población, proponiendo un trabajo integrador para la construcción de opciones y entornos saludables.
+\item Las misión de la Secretaría de Salud Pública es preservar la salud de la población y proponer un trabajo integrador para la construcción de opciones y entornos saludables.
 \item El contexto sanitario mundial de hoy exige que en un futuro cercano se puedan distribuir adecuadamente y de manera segura especialidades medicinales tales como las vacunas.
 \end{itemize}
-Los equipos y software de que se dispone en plaza en su mayoría son de origen extranjero, y su utilización -además de onerosa- implica una dependencia con los fabricantes, en términos económicos pero también de criterios (en general se comercializan por módulos, no proveyendo soluciones integrales). En otras palabras, para trabajar con estos recursos se deben seguir criterios técnico-económicos diseñados para otras latitudes y otras condiciones. Se deben realizar adaptaciones y aproximaciones que implican tareas adicionales y que no siempre son del todo efectivas. El personal destinado a estas tareas debe entrenarse utilizando tiempo y esfuerzo, y este entrenamiento debe reforzarse cada vez que el propietario del sistema decide algún cambio o actualización. En el desarrollo de la presente idea, se ha pensado que tal vez este esfuerzo podría ser redirigido a tareas más provechosas.
-Se requiere entonces el desarrollo de tecnología propia destinada a este fin, que pueda ser adaptada a las necesidades de los investigadores locales, evitando la dependencia tecnológica en equipos y en software, y reduciendo en todo lo posible las erogaciones durante la investigación por este ítem.
+Los equipos y software de que se dispone en plaza en su mayoría son de origen extranjero, y su utilización -además de onerosa- implica una dependencia con los fabricantes, en términos económicos pero también de criterios (en general se comercializan por módulos, no proveyendo soluciones integrales). En otras palabras, para trabajar con estos recursos se deben seguir criterios técnico-económicos diseñados para otras latitudes y otras condiciones. Se deben realizar adaptaciones y aproximaciones que implican tareas adicionales y que no siempre son del todo efectivas. El personal destinado a estas tareas debe entrenarse utilizando tiempo y esfuerzo, y este entrenamiento debe reforzarse cada vez que el propietario del sistema decide algún cambio o actualización. Por consiguiente, es menester redirigir este esfuerzo a tareas más provechosas.
+Se requiere para ello el desarrollo de tecnología propia destinada a este fin, que pueda ser adaptada a las necesidades de los investigadores locales, para evitar la dependencia tecnológica en equipos y en software, y reducir en todo lo posible las erogaciones durante la investigación por este ítem.
 
-Desde el punto de vista tecnológico el presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, quien eventualmente, nos ofrece un portal para poder hacer una visualización, además al no ofrecer una solución integral, cada módulo extra incorporado, representa un gasto o abono adicional. 
+Desde el punto de vista tecnológico, el presente proyecto se destaca especialmente por incorporar una solución integral sin gastos de abono y con la característica distintiva que los datos están guardados en los servidores del cliente. Esto lo diferencia de otros sistemas similares en que los datos quedan en poder del fabricante, quien eventualmente, ofrece un portal para poder hacer una visualización. Además, al no ofrecer una solución integral, cada módulo extra incorporado representa un gasto o abono adicional. 
 
 La solución propuesta se compone de las siguientes partes:
 \begin{itemize}
@@ -140,12 +142,14 @@ La solución propuesta se compone de las siguientes partes:
 
 
 %La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal en las áreas de hemoterapia y vacunación. Además se puede ver el sistema de almacenamiento y visualización implementado con un tablero de control  (dashboard) en un servidor centralizado ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. Es necesario destacar que el sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre una droguería central y 50 centros de atención primaria de la salud.
+En la figura 1 se observa un diagrama en bloques general del sistema, donde se aprecia que los sensores estarán ubicados en distintos efectores del sistema de salud municipal en las áreas de hemoterapia y vacunación. Además se puede ver el sistema de almacenamiento y visualización implementado con un tablero de control  (dashboard) en un servidor centralizado ubicado en el datacenter de la Secretaría de Salud Pública. Por simplicidad, se han dibujado sólo tres efectores. 
+
+Es necesario precisar lo antes mencionado. El sistema de salud pública municipal de la ciudad de Rosario consta de 6 hospitales, un centro de especialidades médicas, un centro regional de sangre, una droguería central y 50 centros de atención primaria de la salud.
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/bloquesgral.png}
+\includegraphics[width=.9\textwidth]{./Figuras/bloquesgral.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
@@ -182,7 +186,7 @@ En la figura 1 se observa un diagrama en bloques general del sistema, donde se a
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 %Auspiciante   &                   &              	&    -    	\\ \hline
 Cliente       & \clientename      &\empclientename	&      Director de Bioingeniería\\ \hline
-Impulsor y colaborador      & Roberto Collelo  & Secretaría de Salud Pública	&Sub Director de Bioingeniería\\ \hline
+Impulsor y colaborador      & Roberto Collelo  & \empclientename	&Sub Director de Bioingeniería\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores & 
                 Silvana Pereyra &Dirección Centros de Salud	 &Jefa Droguería Central\\ \hline
@@ -203,9 +207,9 @@ Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hli
 %\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
 \item Colaboradores
 
-Roberto Collelo, resulta de valiosa ayuda en el desarrollo del firmware de los sensores, además de promover el proyecto en las estructuras de mando de la Secretaría de Salud Pública.
+Roberto Collelo: resulta de valiosa ayuda en el desarrollo del firmware de los sensores, además de promover el proyecto en las estructuras de mando de la Secretaría de Salud Pública.
 
-Silvana Pereyra, su intervención será desde el lado usuarios, ya que se muestra como una facilitadora para la implementación del sistema.
+Silvana Pereyra: su intervención será desde el lado usuarios, ya que se muestra como una facilitadora para la implementación del sistema.
 \end{itemize}
 
 \end{consigna}
@@ -216,7 +220,7 @@ Silvana Pereyra, su intervención será desde el lado usuarios, ya que se muestr
 \label{sec:proposito}
 
 \begin{consigna}{black}
-El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, mantener la calidad y eficacia médica de los productos, asegurando las condiciones legales exigidas por la autoridad.
+El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, mantener la calidad y eficacia médica de los productos y asegurar las condiciones legales exigidas por la autoridad.
 \end{consigna}
 
 \section{2. Alcance del proyecto}
@@ -237,7 +241,7 @@ Se configurarán en la dashboard paneles para que proporcionen información de t
 Las notificaciones de alarmas se harán por medio de la red Telegram, configurando un canal para cada efector/área.
 
 
-El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a internet y las conexiones a internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
+El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a internet y las conexiones a Internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
 Los sensores desarrollados no son aptos para su instalación en equipos ultrafreezer (-70º).
 Los sensores no almacenarán los valores de temperaruras en memorias externas tipo SD ni en la memoria interna del microcontrolador.
 Los sensores no usarán baterías para su funcionamiento.
@@ -254,7 +258,7 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
 \item Las áreas donde se colocarán los sensores deberán disponer de una conexión a internet.
 \item Para la puesta en producción, se utilizará la infraestructura de servidores de la red informática metropolitana de la ciudad de Rosario
-\item Los recursos humanos y el tiempo necesario para el desarollo, serán proporcionados por la Municipalidad de Rosario.
+\item Los recursos humanos y el tiempo necesario para el desarollo serán proporcionados por la Municipalidad de Rosario.
 \item El gasto producido por la compra de los elementos necesarios será proporcionado por la Municipalidad de Rosario.
 \end{itemize}
 
@@ -275,21 +279,23 @@ Estos requerimientos se obtuvieron por:
 \end{itemize}
 
 \begin{enumerate}
-\item Requerimientos de hardware de los sensores
+\item Requerimientos de hardware de los nodos
 	\begin{enumerate}
+	\item Cada nodo estará compuesto por un microcontrolador un elemento sensor de temperatura y la electrónica asociada para su funcionamiento.
 	\item El microcontrolador utilizado deberá estar en fase de producción activa.
 	\item El microcontrolador deberá contener capa física WiFi.	
 	\item El elemento sensor deberá tener un rango de medición entre -50 y 100 ºC
-	\item Deberá incluir en su circuito un filtro activo para la entrada de temperatura.
-	\item Deberá incorporar leds de conexión y rango.	
+	\item El nodo deberá incluir en su circuito un filtro activo de 2º orden para la filtrar las componentes de alta frecuencia de la entrada de temperatura.
+	\item El nodo deberá incorporar indicadores luminosos de conexión con la red WiFi, conexión con el servidor central e indicador de fuera de rango de temperatura.	
 	\end{enumerate}
 	
-\item Requerimientos del software de los sensores
+\item Requerimientos del software de los nodos
 	\begin{enumerate}
 	\item Deberá contener un conjunto de parámetros que identifiquen de forma unívoca el sensor dentro del sistema.	
 	\item Los parámetros se deberán almacenar en memoria no volátil.
 	\item Deberá gestionar el procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.	
-	\item Se deberá incorporar una página web para configuración de parámetros específicos del sensor.
+	\item Deberá incluir parámetros de calibración como offset y ganancia para su futuro contraste con un instrumento patrón.
+	\item El nodo deberá incorporar una página web para configuración de parámetros específicos/calibración del sensor.
 	\item Deberá incorporar un sistema de actualización remota del firmware.
     \item Deberá ser capaz de conectar distintos modelos de sensores de temperatura.
 	\end{enumerate}	
@@ -307,7 +313,7 @@ Estos requerimientos se obtuvieron por:
 		\begin{enumerate}
 		\item Rol Administrador: podrá dar alta a usuarios y cambiar sus roles.
 	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de tiempo y recibir alertas.
-	     \item Rol Operador: Sólo podrá visualizar series de tiempo y recibir alertas.
+	     \item Rol Operador: sólo podrá visualizar series de tiempo y recibir alertas.
 	     \end{enumerate}
 	\item El sistema deberá prever la incorporación de otras variables a monitorear, que serán materia de desarrollos futuros de sensores.
 	\item El sistema de visualización deberá mostrar claramente la estructura jerárquica geográfica de la empresa.	
@@ -551,8 +557,8 @@ Ponderación:0 Prioridad:2
 \begin{consigna}{black}
 \begin{itemize}
 \item Manual de uso
-\item Diagrama esquemático
-\item Código fuente del firmware de los sensores.
+\item Diagrama esquemático del circuito electrónico del nodo.
+\item Código fuente del firmware de los nodos.
 \item 4 placas de PCB sensores de temperatura con el firware instalado y configurado.
 \item Imagen del servidor central con todos los servicios, programas y configuraciones correspondientes.
 \item Diagrama de instalación
@@ -572,23 +578,23 @@ Ponderación:0 Prioridad:2
 	\item Definiciones de alcances, requerimientos y presupuestos. (9 hs).
 	\item Selección de efectores donde colocar los prototipos. (3 hs).
 	\item Seleccion de usuarios que harán las pruebas del prototipo. (3 hs).
-	\item Charlas de sensibilización con los usuarios seleccionados. (6 hs)
+	\item Charlas previas con los usuarios seleccionados para explicar el porqué de la implementación y así facilitar su adopción. (6 hs)
 	\item Estudio y selección de las dashboards disponibles. (10 hs).
 	\item Escritura del plan de trabajo final. (15 hs).
 	\end{enumerate}
 \item Planificación y desarrollo del circuito electrónico y PCB del sensor. (69 hs).
 	\begin{enumerate}
 	\item Estudio y selección de sensores de temperatura. (2 hs).
-	\item Estudio, cáculo y simulación del filtro activo para el sensor de temperatura. (6 hs).
+	\item Estudio, cálculo y simulación del filtro activo para el sensor de temperatura. (6 hs).
 	\item Desarrollo y pruebas del circuito sensor-filtro activo. (15 hs).
     \item Investigación de los microcontroladores aptos para el proyecto. (4 hs).	
-	\item Investigación de las librerías disponibles para el microcontrolador seleccionado. (4 hs).
+	\item Investigación de las bibliotecas disponibles para el microcontrolador seleccionado. (4 hs).
 	\item Desarrollo de la placa PCB del sensor. (30 hs).
 	\item Montaje de los componentes en 4 placas PCB. (8 hs).
 	\end{enumerate}
 \item Planificación y desarrollo del firmware del sensor 235.  (hs).
 	\begin{enumerate}
-	\item Estudio del funcionamiento de las librerías para conectividad WiFI del microcontrolador. (15 hs).
+	\item Estudio del funcionamiento de las bibliotecas para conectividad WiFI del microcontrolador. (15 hs).
 	\item Estudio y elaboración de los certificados TLS.  (10 hs).
 	\item Desarrollo de las funciones de comunicación utilizando protocolo de seguridad. (40 hs).
 	\item Pruebas y depuración de errores en la conexión y transporte del dato al servidor central. (40 hs).
@@ -615,7 +621,7 @@ Ponderación:0 Prioridad:2
 \item Gestión de las notificaciones. (84 hs).
 	\begin{enumerate}
 	\item Creación de canales en Telegram. (2 hs).
-	\item Instalacion de app telegram en usuarios seleccionados para prueba. (2 hs).
+	\item Instalacion de app Telegram en usuarios seleccionados para prueba. (2 hs).
 	\item Creación de la cadena de reglas en dashboard para el envío de alarmas. (20 hs).
 	\item Creación de la cadena de reglas en dashboard para mostrar el estado del dispositivo. (20 hs).
 	\item Pruebas de alarmas de baja y alta temperatura. (20 hs).
