@@ -1,0 +1,42 @@
+ 1.1&Definición de alcances &  \\ \hline
+ 1.2&Selección de efectores &   &  &  &   \\ \hline
+ 1.3&Selección de usuarios  &   &  &  & \\ \hline
+ 1.4&Charlas con usuarios  &   &  &  & \\ \hline
+ 1.5&Estudio de dashboards &  &  &  & \\ \hline
+ 1.6&Escritura del plan de trabajo &   &  &  &\\ \hline
+ 2.1&Estudio de sensores  &  &  &  & \\ \hline
+ 2.2&Estudio y simulación filtro  &   &  &  &\\ \hline 
+ 2.3&Pruebas sensor filtro  &   &  &  &\\ \hline
+ 2.4&Investigación microcontroladores  &   &  &  &\\ \hline
+ 2.5&Investigación bibliotecas  & \  &  &  &\ \hline
+ 2.6&Desarrollo PCB  &   &  &  &\\ \hline
+ 2.7&Montaje PCB  &    &  &  &\\ \hline
+ 
+   &  &  &
+   
+ 3.1&Estudio bibliotecas WiFi  &  &  &  &\\ \hline
+ 3.2&Gestión de certificados TLS  &  &  &  &\\ \hline
+ 3.3&Desarrollo comunicación  &  &  &  &\\ \hline
+ 3.4&Prueba comunicación  &  &  &  &\\ \hline
+ 3.5&Procesamiento variable  &   &  &  &\\ \hline
+ 3.6&Desarrollo página configuración &   &  &  &\\ \hline
+ 3.7&Prueba del conjunto  &  &   &  &\\ \hline
+ 3.8&Depuración de errores  &  &   &  &\\ \hline
+ 4.1&Instalación SO servidor  &  &  &  &\\ \hline
+ 4.2&Gestión de usuarios y permisos &  &  &  &\\ \hline
+ 5.1&Instalación dashboard  &  &  &  &\\ \hline 
+ 5.2&Aprendizaje uso dashboard  &  &  &  &\\ \hline
+ 5.3&Gestión usuarios dashboard  &  &  &  &\\ \hline
+ 5.4&Creación de paneles  &  &  &  &\\ \hline
+ 5.5&Prueba del conjunto  &  &  &  &\\ \hline   
+ 
+ 6.1&Creación canales Telegram  &  &  &  &\\ \hline
+ 6.2&Instalación app Telegram &  &  &  &  \\ \hline
+ 6.3&Creación reglas de alarmas &  &  &  &\\ \hline
+ 6.4&Creación reglas de estado &   &  &  &\\ \hline
+ 6.5&Prueba alarma temperatura &   &  &  &\\ \hline
+ 6.6&Prueba alarma estado &  &  &  & \\ \hline
+ 7.1&Verificación de requierimientos &  &  &  &\\ \hline
+ 8.1&Escritura de manuales &  &  &  &\\ \hline
+ 8.2&Escritura de memoria final &  &  &  &\\ \hline
+ 8.3&Elaboración de la presentación &  &  &  &\\ \hline

@@ -34,7 +34,7 @@
  
 \fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{6 de octubre de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{25 de agosto de 2021}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{13 de abril de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema para la medición, visualización y emisión de alertas de temperatura para heladeras y freezers en bancos de sangre y vacunatorios de efectores de salud de la Municipalidad de Rosario, y tendrá un presupuesto preliminar estimado de 663 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema para la medición, visualización y emisión de alertas de temperatura para heladeras y freezers en bancos de sangre y vacunatorios de efectores de salud de la Municipalidad de Rosario, y tendrá un presupuesto preliminar estimado de 663 hs de trabajo y {\$731120}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -724,6 +724,34 @@ Para la elaboración del mismo, se tomó una jornada de trabajo de 4 horas diari
 \label{sec:recursos}
 Se muestra a continuación una tabla donde se visualiza la utilización de los recursos. Las cantidades están expresadas en horas.
 
+Descripción de los recursos necesarios.
+
+PC desktop: será una computadora de escritorio con sistema operativo Ubuntu 20.04 con las utilidades de oficina instaladas.
+\begin{itemize}
+\item Texmaker
+\item LibreOffice.
+\item Chrome con extensión Gantter.
+\item Git.
+\end{itemize}
+
+Laboratorio: estará compuesto por herramientas e instrumental para desarrollo y armado de placas electrónicas.
+\begin{itemize}
+\item Osciloscopio.
+\item Estación de soldadura/desoldadura.
+\item Generador de ondas arbitrarias.
+\item Fuente de alimentación.
+\item Multímetro de banco.
+\item PC de desarrollo con las utilidades requeridas, Visual Studio Code, Matlab, Git.
+\item Módulos nodeMCU con microcontroladores ESP8266.
+\item Red WiFi con permisos de administración.
+\end{itemize}
+
+Servidor: un hardware de servidor donde se instalará la dashboard. Deberá posser al menos 4 Gb de memoria RAM y capacidad de almacenamiento en disco rígido de al menos 30 Gb. 
+
+Sala de reuniones: espacio de trabajo para albergar al menos un grupo de 10 personas, deberá poseer pantalla y computadora con conexión a Internet.
+
+Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de alarmas.
+
 \begin{table}
 \label{tab:recursos}
 \centering
@@ -739,11 +767,11 @@ Se muestra a continuación una tabla donde se visualiza la utilización de los r
  1.5&Estudio de dashboards & 10 &  &  &  &\\ \hline
  1.6&Escritura del plan de trabajo & 15 &  &  &  &\\ \hline
  2.1&Estudio de sensores  & 2 &  &  &  &\\ \hline
- 2.2&Estudio y simulación filtro  & 6 &  &  &  &\\ \hline 
- 2.3&Pruebas sensor filtro  & 3 & 12 &  &  &\\ \hline
+ 2.2&Estudio y simulación filtro  &  & 6 &  &  &\\ \hline 
+ 2.3&Pruebas sensor filtro  &  & 15 &  &  &\\ \hline
  2.4&Investigación microcontroladores  & 4 &  &  &  &\\ \hline
  2.5&Investigación bibliotecas  & 4 &  &  &  &\\ \hline
- 2.6&Desarrollo PCB  & 30 &  &  &  &\\ \hline
+ 2.6&Desarrollo PCB  &  & 30 &  &  &\\ \hline
  2.7&Montaje PCB  &  & 8 &  &  &\\ \hline
  \end{tabularx}%
  \end{table}
@@ -761,7 +789,7 @@ Se muestra a continuación una tabla donde se visualiza la utilización de los r
  3.2&Gestión de certificados TLS  & 10 &  &  &  &\\ \hline
  3.3&Desarrollo comunicación  &  & 40 &  &  &\\ \hline
  3.4&Prueba comunicación  &  & 40 &  &  &\\ \hline
- 3.5&Procesamiento variable  & 15 &  &  &  &\\ \hline
+ 3.5&Procesamiento variable  &  & 15 &  &  &\\ \hline
  3.6&Desarrollo página configuración &  & 35 &  &  &\\ \hline
  3.7&Prueba del conjunto  &  & 40 &  &  &\\ \hline
  3.8&Depuración de errores  &  & 40 &  &  &\\ \hline
@@ -873,8 +901,10 @@ Descripción &
 \label{sec:responsabilidades}
 %\begin{consigna}{red}
 %Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
-
+En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilidades y el manejo de la autoridad.
 \begin{table}[htpb]
+\caption{\textit{Matriz de asignación de responsabilidades}}
+\label{tab:resp}
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -911,10 +941,10 @@ Descripción &
  2.6&Desarrollo PCB  & P  & I & C &\\ \hline
  2.7&Montaje PCB  & P  & A &  & I\\ \hline
  3.1&Estudio bibliotecas WiFi  & P & I & C &\\ \hline
- 3.2&Gestión de certificados TLS  & P & I &  &\\ \hline
+ 3.2&Gestión de certificados TLS  & P &  &  &\\ \hline
  3.3&Desarrollo comunicación  & P & I &  &\\ \hline
  3.4&Prueba comunicación  & P & A &  & I\\ \hline
- 3.5&Procesamiento variable  & P  & I &  &\\ \hline
+ 3.5&Procesamiento variable  & P  & I & C &\\ \hline
  3.6&Desarrollo página configuración & P  & I & C &\\ \hline
  3.7&Prueba del conjunto  & P & A &  & A\\ \hline
  3.8&Depuración de errores  & P & A &  &\\ \hline
@@ -923,10 +953,10 @@ Descripción &
  5.1&Instalación dashboard  & P & I &  &\\ \hline 
  5.2&Aprendizaje uso dashboard  & P & I &  &\\ \hline
  5.3&Gestión usuarios dashboard  & P & I &  &\\ \hline
- 5.4&Creación de paneles  & P & C &  & I\\ \hline
+ 5.4&Creación de paneles  & P & C & C & C\\ \hline
  5.5&Prueba del conjunto  & P & A &  & A\\ \hline
  6.1&Creación canales Telegram  & P & I &  &\\ \hline
- 6.2&Instalación app Telegram & P & I &  &  \\ \hline
+ 6.2&Instalación app Telegram & S & I &  &  \\ \hline
  6.3&Creación reglas de alarmas & P & I &  &\\ \hline
  6.4&Creación reglas de estado & P & I &  &\\ \hline
  6.5&Prueba alarma temperatura & P & A &  & I\\ \hline
