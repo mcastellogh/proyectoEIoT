@@ -722,61 +722,86 @@ Para la elaboración del mismo, se tomó una jornada de trabajo de 4 horas diari
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
-
+Se muestra a continuación una tabla donde se visualiza la utilización de los recursos. Las cantidades están expresadas en horas.
 
 \begin{table}
 \label{tab:recursos}
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
+ 
+ 1.1&Definición de alcances & 9 & &  &  &  \\ \hline
+ 1.2&Selección de efectores &  &  &  & 3 &  \\ \hline
+ 1.3&Selección de usuarios  &  &  &  & 3 &\\ \hline
+ 1.4&Charlas con usuarios  &  &  &  & 6 &\\ \hline
+ 1.5&Estudio de dashboards & 10 &  &  &  &\\ \hline
+ 1.6&Escritura del plan de trabajo & 15 &  &  &  &\\ \hline
+ 2.1&Estudio de sensores  & 2 &  &  &  &\\ \hline
+ 2.2&Estudio y simulación filtro  & 6 &  &  &  &\\ \hline 
+ 2.3&Pruebas sensor filtro  & 3 & 12 &  &  &\\ \hline
+ 2.4&Investigación microcontroladores  & 4 &  &  &  &\\ \hline
+ 2.5&Investigación bibliotecas  & 4 &  &  &  &\\ \hline
+ 2.6&Desarrollo PCB  & 30 &  &  &  &\\ \hline
+ 2.7&Montaje PCB  &  & 8 &  &  &\\ \hline
+ \end{tabularx}%
+ \end{table}
+ 
+ 
+\begin{table}
+\label{tab:recursos2}
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
+\hline
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
+  
+ 3.1&Estudio bibliotecas WiFi & 15 &  &  &  &\\ \hline
+ 3.2&Gestión de certificados TLS  & 10 &  &  &  &\\ \hline
+ 3.3&Desarrollo comunicación  &  & 40 &  &  &\\ \hline
+ 3.4&Prueba comunicación  &  & 40 &  &  &\\ \hline
+ 3.5&Procesamiento variable  & 15 &  &  &  &\\ \hline
+ 3.6&Desarrollo página configuración &  & 35 &  &  &\\ \hline
+ 3.7&Prueba del conjunto  &  & 40 &  &  &\\ \hline
+ 3.8&Depuración de errores  &  & 40 &  &  &\\ \hline
+ 4.1&Instalación SO servidor  &  &  & 8 &  &\\ \hline
+ 4.2&Gestión de usuarios y permisos &  &  & 8 &  &\\ \hline
+ 5.1&Instalación dashboard  & 4 &  & 4 &  &\\ \hline 
+ 5.2&Aprendizaje uso dashboard  & 15 &  & 10 &  &\\ \hline
+ 5.3&Gestión usuarios dashboard  & 5 &  & 5 &  &\\ \hline
+ 5.4&Creación de paneles  & 20 &  & 20 &  &\\ \hline
+ 5.5&Prueba del conjunto  & 20 &  & 20 &  &\\ \hline
+ 
+ 
+ \end{tabularx}%
+ \end{table} 
+ 
+\begin{table}
+\label{tab:recursos}
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
+\hline
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
+  
+ 
+ 6.1&Creación canales Telegram  & 2 &  &  &  &\\ \hline
+ 6.2&Instalación app Telegram &  &  &  &  &2\\ \hline
+ 6.3&Creación reglas de alarmas & 10 &  & 10 &  &\\ \hline
+ 6.4&Creación reglas de estado &  10 &  & 10 &  &\\ \hline
+ 6.5&Prueba alarma temperatura & 15 &  &  &  &5\\ \hline
+ 6.6&Prueba alarma estado & 15 &  &  &  &5\\ \hline
+ 7.1&Verificación de requierimientos & 20  &  &5  &  &5\\ \hline
+ 8.1&Escritura de manuales & 16 &  &  &  &\\ \hline
+ 8.2&Escritura de memoria final & 40 &  &  &  &\\ \hline
+ 8.3&Elaboración de la presentación & 20 &  &  &  &\\ \hline
 \end{tabularx}%
 \end{table}
 
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -789,24 +814,39 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+
+ Horas de ingeniería &
+  \multicolumn{1}{c|}{663} &
+  \multicolumn{1}{c|}{800} &
+  \multicolumn{1}{c|}{530400} \\ \hline
+
+ Fabricación de PCB&
+  \multicolumn{1}{c|}{10} &
+  \multicolumn{1}{c|}{800} &
+  \multicolumn{1}{c|}{8000} \\ \hline
+
+ Componentes electrónicos para un nodo&
+  \multicolumn{1}{c|}{10} &
+  \multicolumn{1}{c|}{1500} &
+  \multicolumn{1}{c|}{15000} \\ \hline
+ 
+ Cables y conectores&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{4500} &
+  \multicolumn{1}{c|}{4500} \\ \hline  
+  
+ Cajas plásticas&
+  \multicolumn{1}{c|}{10} &
+  \multicolumn{1}{c|}{300} &
+  \multicolumn{1}{c|}{3000} \\ \hline
+
+ Estaño 60/40 250gr&
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{1500} &
+  \multicolumn{1}{c|}{1500} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{562400} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -814,31 +854,25 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+\multicolumn{1}{|l|}{30 \% de los costos directos} &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{168720} &
+  \multicolumn{1}{c|}{168720} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{168720} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+\multicolumn{1}{c|}{731120}   \\ \hline
 \end{tabularx}%
 \end{table}
 
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
+%\begin{consigna}{red}
+%Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
 \begin{table}[htpb]
 \centering
@@ -853,19 +887,55 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
 \cellcolor[HTML]{C0C0C0} &
   \cellcolor[HTML]{C0C0C0} &
   Responsable &
-  Orientador &
-  Equipo &
+  Director &
+  Impulsor &
   Cliente \\ \cline{3-6} 
 \rowcolor[HTML]{C0C0C0} 
 \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
   \authorname &
   \supname &
-  Nombre de alguien &
+  Roberto Collelo &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+ 1.1&Definición de alcances & P & A &  & A \\ \hline
+ 1.2&Selección de efectores &  S & I &  & A  \\ \hline
+ 1.3&Selección de usuarios  &  S & I &  & A\\ \hline
+ 1.4&Charlas con usuarios  & P  & I &  & I\\ \hline
+ 1.5&Estudio de dashboards & P & I &  & \\ \hline
+ 1.6&Escritura del plan de trabajo & P & A  &  & A \\ \hline
+ 2.1&Estudio de sensores  & P &  & C  & \\ \hline
+ 2.2&Estudio y simulación filtro  & P  & C &  &\\ \hline 
+ 2.3&Pruebas sensor filtro  &  P & A &  & A\\ \hline
+ 2.4&Investigación microcontroladores  & P  & I & C &\\ \hline
+ 2.5&Investigación bibliotecas  & P  & I & C &\\ \hline
+ 2.6&Desarrollo PCB  & P  & I & C &\\ \hline
+ 2.7&Montaje PCB  & P  & A &  & I\\ \hline
+ 3.1&Estudio bibliotecas WiFi  & P & I & C &\\ \hline
+ 3.2&Gestión de certificados TLS  & P & I &  &\\ \hline
+ 3.3&Desarrollo comunicación  & P & I &  &\\ \hline
+ 3.4&Prueba comunicación  & P & A &  & I\\ \hline
+ 3.5&Procesamiento variable  & P  & I &  &\\ \hline
+ 3.6&Desarrollo página configuración & P  & I & C &\\ \hline
+ 3.7&Prueba del conjunto  & P & A &  & A\\ \hline
+ 3.8&Depuración de errores  & P & A &  &\\ \hline
+ 4.1&Instalación SO servidor  & P & I &  &\\ \hline
+ 4.2&Gestión de usuarios y permisos & P & I &  &\\ \hline
+ 5.1&Instalación dashboard  & P & I &  &\\ \hline 
+ 5.2&Aprendizaje uso dashboard  & P & I &  &\\ \hline
+ 5.3&Gestión usuarios dashboard  & P & I &  &\\ \hline
+ 5.4&Creación de paneles  & P & C &  & I\\ \hline
+ 5.5&Prueba del conjunto  & P & A &  & A\\ \hline
+ 6.1&Creación canales Telegram  & P & I &  &\\ \hline
+ 6.2&Instalación app Telegram & P & I &  &  \\ \hline
+ 6.3&Creación reglas de alarmas & P & I &  &\\ \hline
+ 6.4&Creación reglas de estado & P & I &  &\\ \hline
+ 6.5&Prueba alarma temperatura & P & A &  & I\\ \hline
+ 6.6&Prueba alarma estado & P & A &  & I \\ \hline
+ 7.1&Verificación de requierimientos & P & A &  & A\\ \hline
+ 8.1&Escritura de manuales & P & A &  & A\\ \hline
+ 8.2&Escritura de memoria final & P & A &  & I\\ \hline
+ 8.3&Elaboración de la presentación & P & A &  & I\\ \hline
+
 \end{tabular}%
 }
 \end{table}
@@ -881,12 +951,12 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
+%Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
+%A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
 
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
+%Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
 
-\end{consigna}
+%\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
