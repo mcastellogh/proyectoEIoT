@@ -15,7 +15,7 @@
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Juan José Salerno}
-\pertenenciaDirector{Universidad Tecnológica Nacional - Facultad Regional Rosario} 
+\pertenenciaDirector{UTN - FRRO} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -123,7 +123,7 @@ La medición a distancia continua y en tiempo real de estas temperaturas sumado 
 
 Este tabajo se enmarca en dos premisas fundamentales:
 \begin{itemize}
-\item Las misión de la Secretaría de Salud Pública es preservar la salud de la población y proponer un trabajo integrador para la construcción de opciones y entornos saludables.
+\item La misión de la Secretaría de Salud Pública es preservar la salud de la población y proponer un trabajo integrador para la construcción de opciones y entornos saludables.
 \item El contexto sanitario mundial de hoy exige que en un futuro cercano se puedan distribuir adecuadamente y de manera segura especialidades medicinales tales como las vacunas.
 \end{itemize}
 Los equipos y software de que se dispone en plaza en su mayoría son de origen extranjero, y su utilización -además de onerosa- implica una dependencia con los fabricantes, en términos económicos pero también de criterios (en general se comercializan por módulos, no proveyendo soluciones integrales). En otras palabras, para trabajar con estos recursos se deben seguir criterios técnico-económicos diseñados para otras latitudes y otras condiciones. Se deben realizar adaptaciones y aproximaciones que implican tareas adicionales y que no siempre son del todo efectivas. El personal destinado a estas tareas debe entrenarse utilizando tiempo y esfuerzo, y este entrenamiento debe reforzarse cada vez que el propietario del sistema decide algún cambio o actualización. Por consiguiente, es menester redirigir este esfuerzo a tareas más provechosas.
@@ -241,9 +241,9 @@ Se configurarán en la dashboard paneles para que proporcionen información de t
 Las notificaciones de alarmas se harán por medio de la red Telegram, configurando un canal para cada efector/área.
 
 
-El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a internet y las conexiones a Internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
+El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a Internet y las conexiones a Internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
 Los sensores desarrollados no son aptos para su instalación en equipos ultrafreezer (-70º).
-Los sensores no almacenarán los valores de temperaruras en memorias externas tipo SD ni en la memoria interna del microcontrolador.
+Los sensores no almacenarán los valores de temperaturas en memorias externas tipo SD ni en la memoria interna del microcontrolador.
 Los sensores no usarán baterías para su funcionamiento.
 
 \end{consigna}
@@ -256,9 +256,9 @@ Los sensores no usarán baterías para su funcionamiento.
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Las áreas donde se colocarán los sensores deberán disponer de una conexión a internet.
+\item Las áreas donde se colocarán los sensores deberán disponer de una conexión a Internet.
 \item Para la puesta en producción, se utilizará la infraestructura de servidores de la red informática metropolitana de la ciudad de Rosario
-\item Los recursos humanos y el tiempo necesario para el desarollo serán proporcionados por la Municipalidad de Rosario.
+\item Los recursos humanos y el tiempo necesario para el desarrollo serán proporcionados por la Municipalidad de Rosario.
 \item El gasto producido por la compra de los elementos necesarios será proporcionado por la Municipalidad de Rosario.
 \end{itemize}
 
@@ -366,7 +366,7 @@ Estos requerimientos se obtuvieron por:
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 Se muestran a continuación, las historias de usuarios recopiladas. Al principio se presentan dos épicas y sus correspondientes desgloses emanadas de las máximas autoridades de la empresa.
 
-La ponderación de estas historias se realizó teniendo en cuenta la complejidad y el tiempo necesario en resolverlas (criterios complejidad-volumen). Se elijió para la ello una escala basada en la serie de Fibonacci desde el 0 al 13, donde el 0 representa poco esfuerzo y el 13 alto esfuerzo para lograr el objetivo. 
+La ponderación de estas historias se realizó teniendo en cuenta la complejidad y el tiempo necesario en resolverlas (criterios complejidad-volumen). Se eligió para ello una escala basada en la serie de Fibonacci desde el 0 al 13, donde el 0 representa poco esfuerzo y el 13 alto esfuerzo para lograr el objetivo. 
 
 La siguiente tabla muestra la clasificación de las funcionalidades observadas y su ponderación.
 
@@ -407,7 +407,7 @@ Descripción de las historias de usuarios
 
 
 \begin{itemize}
-\item EPICA: Como Secretario de Salud Pública Municipal, necesito estar seguro de la buena conservación de las vacunas, para poder informar al estado provincial y nacional la disponibilidad de las mismas.
+\item ÉPICA: como Secretario de Salud Pública Municipal, necesito estar seguro de la buena conservación de las vacunas, para poder informar al estado provincial y nacional la disponibilidad de las mismas.
 
 Desglose
 	\begin{itemize}
@@ -433,12 +433,12 @@ Ponderación:13 Prioridad:5
 \end{itemize}
 
 \begin{itemize}
-\item EPICA: Como Director de Infraestructura Hospitalaria, deseo conocer si algún efector de la red presenta problemas en los refrigeradores críticos y así direccionar las acciones necesarias para su correción. 
+\item ÉPICA: como Director de Infraestructura Hospitalaria, deseo conocer si algún efector de la red presenta problemas en los refrigeradores críticos y así direccionar las acciones necesarias para su corrección. 
 
 Desglose
 
 	\begin{itemize}
-	\item Como Director de Infraestructura Hospitalaria, necesito visualizar mendiante un mapa interactivo el estado de todos los refrigeradores para poder diagramar las acciones de corrección necesarias.  
+	\item Como Director de Infraestructura Hospitalaria, necesito visualizar mediante un mapa interactivo el estado de todos los refrigeradores para poder diagramar las acciones de corrección necesarias.  
 
 Ponderación:5 Prioridad:3
 	\end{itemize}
@@ -453,18 +453,18 @@ Ponderación:3 Prioridad:3
 
 
 \begin{itemize}
-\item EPICA: Como Director de Infraestructura Hospitalaria, deseo que a este sistema se le puedan adicionar otras variables físicas para tener un panel de control completo de todo el equipamiento a mi cargo. 
+\item ÉPICA: como Director de Infraestructura Hospitalaria, deseo que a este sistema se le puedan adicionar otras variables físicas para tener un panel de control completo de todo el equipamiento a mi cargo. 
 
 Desglose
 
 	\begin{itemize}
-	\item Como Director de Infraestructura Hospitalaria, deseo conoder el nivel de los tanques de agua de todos los efectores de la Municipalidad, para prevenir posibles faltantes de este elemento primordial.
+	\item Como Director de Infraestructura Hospitalaria, deseo conocer el nivel de los tanques de agua de todos los efectores de la Municipalidad, para prevenir posibles faltantes de este elemento primordial.
 	
 Ponderación: 13 Prioridad:5
 	\end{itemize}
 
 	\begin{itemize}
-	\item Como Director de Infraestructura Hospitalaria, deseo conoder el estado de los filtros HEPA de los equipos de aire acondicionado de todos los efectores de la Municipalidad, para poder programar su compra y recambio.
+	\item Como Director de Infraestructura Hospitalaria, deseo conocer el estado de los filtros HEPA de los equipos de aire acondicionado de todos los efectores de la Municipalidad, para poder programar su compra y recambio.
 	
 Ponderación: 13 Prioridad:5
 	\end{itemize}
@@ -472,7 +472,7 @@ Ponderación: 13 Prioridad:5
 \end{itemize}
 
 \begin{itemize}
-\item Como responsable de mantenimiento necesito conocer la evolución de las temperaturas de los refirgeradores en los últimos 6 meses, para estimar las intervenciones preventivas en tales equipos. 
+\item Como responsable de mantenimiento necesito conocer la evolución de las temperaturas de los refrigeradores en los últimos 6 meses, para estimar las intervenciones preventivas en tales equipos. 
 
 Ponderación: 3 Prioridad:3
 \end{itemize}
@@ -499,7 +499,7 @@ Ponderación:3 Prioridad:1
 
 
 \begin{itemize}
-\item Como jefe de seguridad informática, necesito que la comunicación de los sensores se haga con mecanismos de encriptación, para proteger los datos de posibles cambios por intromisiones no desadas. 
+\item Como jefe de seguridad informática, necesito que la comunicación de los sensores se haga con mecanismos de encriptación, para proteger los datos de posibles cambios por intromisiones no deseadas. 
 
 Ponderación:5 Prioridad:4
 \end{itemize}
@@ -538,13 +538,13 @@ Ponderación:3 Prioridad:2
 \end{itemize}
 
 \begin{itemize}
-\item Como técnico hemoterapista de guardia, necesito obtener el registro de las últimas 24 hs de temperaturas para entregar mi guardia con los productos asegurados en su cadena de frio. 
+\item Como técnico hemoterapista de guardia, necesito obtener el registro de las últimas 24 hs de temperaturas para entregar mi guardia con los productos asegurados en su cadena de frío. 
 
 Ponderación:1 Prioridad:2
 \end{itemize}
 
 \begin{itemize}
-\item Como operario de droguería, necesito que el sistema registre las temperaturas cada 10 minutos para evitar los olvidos y las impresiciones del registro manual. 
+\item Como operario de droguería, necesito que el sistema registre las temperaturas cada 10 minutos para evitar los olvidos y las imprecisiones del registro manual. 
 
 Ponderación:0 Prioridad:2
 \end{itemize}
@@ -559,7 +559,7 @@ Ponderación:0 Prioridad:2
 \item Manual de uso
 \item Diagrama esquemático del circuito electrónico del nodo.
 \item Código fuente del firmware de los nodos.
-\item 4 placas de PCB sensores de temperatura con el firware instalado y configurado.
+\item 4 placas de PCB sensores de temperatura con el firmware instalado y configurado.
 \item Imagen del servidor central con todos los servicios, programas y configuraciones correspondientes.
 \item Diagrama de instalación
 \item Informe final
@@ -577,7 +577,7 @@ Ponderación:0 Prioridad:2
 	\begin{enumerate}
 	\item Definiciones de alcances, requerimientos y presupuestos. (9 hs).
 	\item Selección de efectores donde colocar los prototipos. (3 hs).
-	\item Seleccion de usuarios que harán las pruebas del prototipo. (3 hs).
+	\item Selección de usuarios que harán las pruebas del prototipo. (3 hs).
 	\item Charlas previas con los usuarios seleccionados para explicar el porqué de la implementación y así facilitar su adopción. (6 hs)
 	\item Estudio y selección de las dashboards disponibles. (10 hs).
 	\item Escritura del plan de trabajo final. (15 hs).
@@ -598,7 +598,7 @@ Ponderación:0 Prioridad:2
 	\item Estudio y elaboración de los certificados TLS.  (10 hs).
 	\item Desarrollo de las funciones de comunicación utilizando protocolo de seguridad. (40 hs).
 	\item Pruebas y depuración de errores en la conexión y transporte del dato al servidor central. (40 hs).
-	\item Desarrollo de las fuciones de procesamiento de la variable medida. (15 hs).
+	\item Desarrollo de las funciones de procesamiento de la variable medida. (15 hs).
 	\item Desarrollo de la página web de configuración. (35 hs).
 	\item Prueba del conjunto. (40 hs).
 	\item Depuración de errores. (40 hs).
@@ -621,7 +621,7 @@ Ponderación:0 Prioridad:2
 \item Gestión de las notificaciones. (84 hs).
 	\begin{enumerate}
 	\item Creación de canales en Telegram. (2 hs).
-	\item Instalacion de app Telegram en usuarios seleccionados para prueba. (2 hs).
+	\item Instalación de app Telegram en usuarios seleccionados para prueba. (2 hs).
 	\item Creación de la cadena de reglas en dashboard para el envío de alarmas. (20 hs).
 	\item Creación de la cadena de reglas en dashboard para mostrar el estado del dispositivo. (20 hs).
 	\item Pruebas de alarmas de baja y alta temperatura. (20 hs).
@@ -746,7 +746,7 @@ Laboratorio: estará compuesto por herramientas e instrumental para desarrollo y
 \item Red WiFi con permisos de administración.
 \end{itemize}
 
-Servidor: un hardware de servidor donde se instalará la dashboard. Deberá posser al menos 4 Gb de memoria RAM y capacidad de almacenamiento en disco rígido de al menos 30 Gb. 
+Servidor: un hardware de servidor donde se instalará la dashboard. Deberá poseer al menos 4 Gb de memoria RAM y capacidad de almacenamiento en disco rígido de al menos 30 Gb. 
 
 Sala de reuniones: espacio de trabajo para albergar al menos un grupo de 10 personas, deberá poseer pantalla y computadora con conexión a Internet.
 
@@ -820,7 +820,7 @@ Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de al
  6.4&Creación reglas de estado &  10 &  & 10 &  &\\ \hline
  6.5&Prueba alarma temperatura & 15 &  &  &  &5\\ \hline
  6.6&Prueba alarma estado & 15 &  &  &  &5\\ \hline
- 7.1&Verificación de requierimientos & 20  &  &5  &  &5\\ \hline
+ 7.1&Verificación de requerimientos & 20  &  &5  &  &5\\ \hline
  8.1&Escritura de manuales & 16 &  &  &  &\\ \hline
  8.2&Escritura de memoria final & 40 &  &  &  &\\ \hline
  8.3&Elaboración de la presentación & 20 &  &  &  &\\ \hline
@@ -961,7 +961,7 @@ En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilid
  6.4&Creación reglas de estado & P & I &  &\\ \hline
  6.5&Prueba alarma temperatura & P & A &  & I\\ \hline
  6.6&Prueba alarma estado & P & A &  & I \\ \hline
- 7.1&Verificación de requierimientos & P & A &  & A\\ \hline
+ 7.1&Verificación de requerimientos & P & A &  & A\\ \hline
  8.1&Escritura de manuales & P & A &  & A\\ \hline
  8.2&Escritura de memoria final & P & A &  & I\\ \hline
  8.3&Elaboración de la presentación & P & A &  & I\\ \hline
@@ -1016,6 +1016,7 @@ Riesgo 3:
 
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+ghgj
 
 \begin{table}[htpb]
 \centering
