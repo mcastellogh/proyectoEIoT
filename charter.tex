@@ -1,5 +1,5 @@
 \documentclass[11pt]{charter}
-
+\usepackage{pdflscape}
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Sistema de monitoreo de temperaturas en tiempo real para refrigeradores críticos de salud} 
 
@@ -684,6 +684,7 @@ En la figura \ref{wbs} se aprecia la tabla del desglose de actividades con sus f
 %Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
 %Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
 
+
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=1\textwidth]{./Figuras/wbs.pdf}
@@ -700,29 +701,31 @@ En la figura \ref{wbs} se aprecia la tabla del desglose de actividades con sus f
 En las figuras \ref{gantt1} y \ref{gantt2} se observa el diagrama de gantt.
 Para la elaboración del mismo, se tomó una jornada de trabajo de 4 horas diarias y se ajustó el calendario para exceptuar el mes de enero de 2021.
 
-
+\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[angle=-90,width=.75\textwidth]{./Figuras/gantt1.png}
+\includegraphics[width=1.5\textwidth]{./Figuras/gantt1.png}
 \vspace{-0.3cm} 
 \caption{\textit{Diagrama de gantt parte 1/2}}
 \label{gantt1}
 \end{figure}
+\end{landscape}
 
+\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[angle=-90,width=.75\textwidth]{./Figuras/gantt2.png}
+\includegraphics[width=1.5\textwidth]{./Figuras/gantt2.png}
 \vspace{-0.3cm} 
 \caption{\textit{Diagrama de gantt parte 2/2}}
 \label{gantt2}
 \end{figure}
- 
+ \end{landscape}
 
 
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
-Se muestra a continuación una tabla donde se visualiza la utilización de los recursos. Las cantidades están expresadas en horas.
+En la tabla \ref{recursos1}, se visualiza la utilización de los recursos. Las cantidades están expresadas en horas.
 
 Descripción de los recursos necesarios.
 
@@ -753,9 +756,11 @@ Sala de reuniones: espacio de trabajo para albergar al menos un grupo de 10 pers
 Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de alarmas.
 
 \begin{table}
-\label{tab:recursos}
+
 \centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+%\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
 \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
 \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
@@ -773,19 +778,7 @@ Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de al
  2.5&Investigación bibliotecas  & 4 &  &  &  &\\ \hline
  2.6&Desarrollo PCB  &  & 30 &  &  &\\ \hline
  2.7&Montaje PCB  &  & 8 &  &  &\\ \hline
- \end{tabularx}%
- \end{table}
- 
- 
-\begin{table}
-\label{tab:recursos2}
-\centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
-\hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
-  
- 3.1&Estudio bibliotecas WiFi & 15 &  &  &  &\\ \hline
+  3.1&Estudio bibliotecas WiFi & 15 &  &  &  &\\ \hline
  3.2&Gestión de certificados TLS  & 10 &  &  &  &\\ \hline
  3.3&Desarrollo comunicación  &  & 40 &  &  &\\ \hline
  3.4&Prueba comunicación  &  & 40 &  &  &\\ \hline
@@ -800,21 +793,7 @@ Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de al
  5.3&Gestión usuarios dashboard  & 5 &  & 5 &  &\\ \hline
  5.4&Creación de paneles  & 20 &  & 20 &  &\\ \hline
  5.5&Prueba del conjunto  & 20 &  & 20 &  &\\ \hline
- 
- 
- \end{tabularx}%
- \end{table} 
- 
-\begin{table}
-\label{tab:recursos}
-\centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|c|@{}}
-\hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{5}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-7} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC desktop & Laboratorio & Servidor & Sala reuniones & Teléfono móvil \\ \hline
-  
- 
- 6.1&Creación canales Telegram  & 2 &  &  &  &\\ \hline
+  6.1&Creación canales Telegram  & 2 &  &  &  &\\ \hline
  6.2&Instalación app Telegram &  &  &  &  &2\\ \hline
  6.3&Creación reglas de alarmas & 10 &  & 10 &  &\\ \hline
  6.4&Creación reglas de estado &  10 &  & 10 &  &\\ \hline
@@ -824,10 +803,12 @@ Teléfono móvil: un teléfono propio para hacer las pruebas de recepción de al
  8.1&Escritura de manuales & 16 &  &  &  &\\ \hline
  8.2&Escritura de memoria final & 40 &  &  &  &\\ \hline
  8.3&Elaboración de la presentación & 20 &  &  &  &\\ \hline
-\end{tabularx}%
-\end{table}
-
-
+ \end{tabular}%
+ }
+ \caption{\textit{Tabla de asignación de recursos}}
+ \label{recursos1}
+ \end{table}
+ 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
@@ -903,8 +884,7 @@ Descripción &
 %Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilidades y el manejo de la autoridad.
 \begin{table}[htpb]
-\caption{\textit{Matriz de asignación de responsabilidades}}
-\label{tab:resp}
+
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -968,6 +948,8 @@ En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilid
 
 \end{tabular}%
 }
+\caption{\textit{Matriz de asignación de responsabilidades}}
+\label{tab:resp}
 \end{table}
 
 {\footnotesize
