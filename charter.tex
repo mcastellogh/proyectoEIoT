@@ -1073,51 +1073,43 @@ Para cada uno de los requerimientos del proyecto indique:
 \item Req 1.1: Cada nodo estará compuesto por un microcontrolador un elemento sensor de
 temperatura y la electrónica asociada para su funcionamiento.
 	\begin{itemize}
-	\item Verificación Se observa en el diagrama esquemático del circuito la incorporación de un microcontrolador y el sensor de temperatura
-	
-	 para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación Comprobación de pagina web interna valida la inclusion de un micro y el sensor
-	
+	\item Verificación: se observará si el diagrama esquemático del circuito incorpora un microcontrolador y un sensor de temperatura.
+	\item Validación: Comprobación de pagina web interna valida la inclusion de un micro y el sensor
 	Se observa en el diagrama esquemático del circuito la incorporación de un microcontrolador y el sensor de temperatura
-
-con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
 \end{itemize}
 
 \item 1.2: El microcontrolador utilizado deberá estar en fase de producción activa.
-
-
 \begin{itemize}
-\item Verificación La info de fábrica Espresiff asegura la produccion activa
-\item Validación comprandolo en la pag web figura si esta activo
+\item Verificación: se observará la información que figura en la página web del fabricante del microcontrolador seleccionado.
+\item Validación: al comprar el dispositivo, el proveedor indica el estado de fabricación.
 \end{itemize}
 
 \item 1.3 El microcontrolador deberá contener capa física WiFi.
 
 \begin{itemize}
-\item Verificación La datasheet de fábrica Espresiff asegura la wifi
-\item Validación la prueba de conexion wifi exitosa
+\item Verificación: se observará la hoja de datos del componente.
+\item Validación: se graba un programa de ejemplo para comprobar la conexión WiFi exitosa.
 \end{itemize}
-
 
 
 \item 1.4 El elemento sensor deberá tener un rango de medición entre -50 y 100 ºC
 \begin{itemize}
-\item Verificación La datasheet de fábrica del sensor asegura el rango de temp
-\item Validación la prueba de funcionamiento a temperaturas entre -50 y 100 arroja valores exactos.
+\item Verificación: se observará la hoja de datos del sensor.
+\item Validación: se hará una prueba de funcionamiento a temperaturas entre -50 y 100 para observar que los valores medidos sean exactos.
 \end{itemize}
 
 
 \item 1.5 El nodo deberá incluir en su circuito un filtro activo de 2º orden para la filtrar las componentes de alta frecuencia de la entrada de temperatura.
 \begin{itemize}
-\item Verificación se observa en el diagrama esquemático del circuito la incorporación de un operacional dispuesto como filtro activo de segundo orden en la entrada analógica del microcontrolador
-\item Validación se hacen pruebas de simulación para validar la efectividad del filtro.
+\item Verificación: se observará en el diagrama esquemático del circuito la incorporación de un operacional dispuesto como filtro activo de segundo orden en la entrada analógica del microcontrolador
+\item Validación: se harán pruebas de simulación para validar la efectividad del filtro.
 \end{itemize}
 
 \item 1.6 El nodo deberá incorporar indicadores luminosos de conexión con la red WiFi, conexión con el servidor central e indicador de fuera de rango de temperatura.
 
 \begin{itemize}
-\item Verificación se observa en el diagrama esquemático del circuito la incorporación de tres leds: conexión WiFi, Fuera de rango y conexión con servidor central
-\item Validación se hacen pruebas de conexión, desconexión de la red WiFi y del servidor central para validar el funcionamiento. Se simula a través de la inyección de una tensión equivalente en la entrada analógica el funcionamiento del led de fuera de rango.
+\item Verificación: se observará en el diagrama esquemático del circuito la incorporación de tres leds: conexión WiFi, Fuera de rango y conexión con servidor central.
+\item Validación: se harán pruebas de conexión, desconexión de la red WiFi y del servidor central para validar el funcionamiento. Se simulará a través de la inyección de una tensión equivalente en la entrada analógica el funcionamiento del led de fuera de rango.
 \end{itemize}
 
 \item 2.1 Deberá contener un conjunto de parámetros que identifiquen de forma unívoca el sensor dentro del sistema.
@@ -1125,48 +1117,47 @@ con el cliente para confirmar que está de acuerdo en que se cumplió con lo req
 
 
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de tales parámetros y su grabación en memoria no volátil
-\item Validación a través de al pag web del dispositivo se comprueba que existan los parámetros. Se procede al cambio de valores, reinicio del dispositivo y la visualización de los paramétros antes grabados.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión de tales parámetros y su grabación en memoria no volátil.
+\item Validación: a través de al página web del dispositivo se comprobará que existan los parámetros. Se procederá al cambio de valores, reinicio del dispositivo y comprobación del cambio de los parámetros antes grabados.
 \end{itemize}
 
 \item 2.3 Deberá gestionar el procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware para observar la inclusión del algoritmo de muestreo y promediación de la temperatura.
-\item Validación a través de la pag web del dispositivo se comprueba que se actualice una medición cada 10 minutos.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión del algoritmo de muestreo y promedio de la temperatura.
+\item Validación: a través de la página web del dispositivo se comprobará que se actualice una medición cada 10 minutos.
 \end{itemize}
 
 \item 2.4 Deberá incluir parámetros de calibración como offset y ganancia para su futuro contraste con un instrumento patrón.
 \item 2.7 Deberá ser capaz de conectar distintos modelos de sensores de temperatura.
-
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de la función de transferencia del sensor especificada por el fabricante del mismo.
-\item Validación a través de la pag web del dispositivo se cambian los valores de offset y ganancia y se comprueba que los valores medidos hayan cambiado. Se repite la comprobación para distintos tipos de sensores, cambiando los parámetros de la función de transferencia y comprobando los resultados de la medición.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión de la función de transferencia del sensor especificada por el fabricante del mismo.
+\item Validación: a través de la página web del dispositivo se cambiarán los valores de offset y ganancia y se comprobará que los valores medidos hayan cambiado. Se repetirá la comprobación para distintos tipos de sensores, cambiando los parámetros de la función de transferencia y comprobando los resultados de la medición.
 \end{itemize}
 
 \item 2.5 El nodo deberá incorporar una página web para configuración de parámetros específicos/calibración del sensor
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de las funciones para la activación del servidor web interno y las funciones para cada uno de los recursos que dicho servidor proveerá al navegador cliente.
-\item Validación se ingresa a la página web del dispositivo y se observan todas las funcionalidades.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión de las funciones para la activación del servidor web interno y las funciones para cada uno de los recursos que dicho servidor proveerá al navegador cliente.
+\item Validación: se ingresará a la página web del dispositivo y se observarán todas las funcionalidades.
 \end{itemize}
 
 
 \item 2.6 Deberá incorporar un sistema de actualización remota del firmware.
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de las funciones para la actualización remota
-\item Validación a través de un comando RPC se le indica al dispositivo que tiene que actualizar su firmware. Una vez reiniciado, verificar el cambio de versión consultando la página web del dispositivo.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión de las funciones para la actualización remota.
+\item Validación: a través de un comando se le indicará al dispositivo que tiene que actualizar su firmware. Una vez reiniciado, se verificará el cambio de versión consultando la página web del dispositivo.
 \end{itemize}
 
 \item 3.1 La transmisión de los datos se deberá realizar con encriptación, utilizando para ello protocolos de seguridad.
 \begin{itemize}
-\item Verificación se inspecciona el código fuente del firmware y los archivos asociados para observar la inclusión de las funciones para la encriptación y el archivo de certificado correspondiente.
-\item Validación se intenta una conexión con el servidor central configurado sin certificados TLS y se comprueba que no es posible la misma. Se hace la misma prueba configurando el certificado en el servidor, comprando la conexión exitosa.
+\item Verificación: se inspeccionará el código fuente del firmware y los archivos asociados para observar la inclusión de las funciones para la encriptación y el archivo de certificado correspondiente.
+\item Validación: se intentará una conexión con el servidor central configurado sin certificados TLS y se comprobará que no es posible la misma. Se hará la misma prueba configurando el certificado en el servidor. Se comprobará la conexión exitosa.
 \end{itemize}
 
 \item 3.2 El acceso al sistema de visualización deberá ser con usuario y contraseña.
 \item 3.3 El acceso a la página web del sensor deberá ser con usuario y contraseña.
 \begin{itemize}
-\item Verificación se observa que exista la posibilidad de configuración de usuarios y contraseñas en el sistema de visualización.
-\item Validación se configura en el sistema de visualización un usuario con su contraseña. Se intenta conectar al sistema de visualización con el usuario sin contraseña o con contraseña errónea, y se observa el rechazo al ingreso. Se comprueba el ingreso colocando el usuario y la contraseña correctos.
+\item Verificación: se observará que exista la posibilidad de configuración de usuarios y contraseñas en el sistema de visualización.
+\item Validación: se configurará en el sistema de visualización un usuario con su contraseña. Se intentará conectar al sistema de visualización con el usuario sin contraseña o con contraseña errónea, y se comprobará el rechazo al ingreso. Se comprobará el ingreso colocando el usuario y la contraseña correctos.
 \end{itemize}
 
 \item 4.1 El sistema de visualización debe incluir roles para distintos usuarios.
@@ -1175,16 +1166,63 @@ con el cliente para confirmar que está de acuerdo en que se cumplió con lo req
 	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de tiempo y recibir alertas.
 	     \item Rol Operador: sólo podrá visualizar series de tiempo y recibir alertas.
 	     \end{enumerate}
-	     \begin{itemize}
-\item Verificación se observa que exista la posibilidad de configuración de distintos usuarios en el sistema de visualización, y poder asignarle distintos paneles a cada uno. 
-\item Validación se configuran en el sistema de visualización roles para usuarios administrador, jefe y operador, asignándoles distintos paneles a cada uno. Se ingresa al sistema con cada uno de los usuarios configurados y se observa que los paneles correspondan a cada rol.
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de distintos usuarios en el sistema de visualización, y la capacidad de asignación de distintos paneles a cada uno. 
+\item Validación: se configurarán en el sistema de visualización roles para usuarios administrador, jefe y operador, y se les asignarán distintos paneles a cada uno. Se ingresará al sistema con cada uno de los usuarios configurados y se observará que los paneles correspondan a cada rol.
 \end{itemize}
 	     
+\item 4.2 El sistema deberá prever la incorporación de otras variables a monitorear, que serán materia de desarrollos futuros de sensores.
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de distintos tipos de dispositivos para medición de otras variables. 
+\item Validación: se simulará en el sistema de visualización la inyección de distintas variables físicas. Se configurarán paneles para la observación de la misma.
+\end{itemize}
+
+\item 4.3 El sistema de visualización deberá mostrar claramente la estructura jerárquica geográfica de la empresa.	
+\item 4.4 El sistema deberá ser escalable para implementar nuevas áreas a monitorear.
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de puntos georreferenciados para definir los locales de los efectores de salud.
+\item Validación: se configurarán paneles para la observación de las áreas en un mapa y se configurarán las coordenadas de cada área nueva. Se observarán que las áreas aparezcan georreferenciadas.
+\end{itemize}
+
+\item 5.1 Deberá mostrar la temperatura.
+\item 5.2 Deberá mostrar el estado del dispositivo. (online/fuera de rango)
+\item 5.3 Deberá mostrar la fecha y hora de la última telemetría enviada al servidor.
+\item 5.4 Deberá mostrar la configuración de los parámetros de alertas (rangos de temperatura).
+\item 5.5 Deberá mostrar una vista rápida de los sensores fuera de rango mediante plano en pantalla del área.
+\item 5.6 Deberá mostrar una tabla con el histórico de alarmas por cada sensor.
+\item 5.7 Deberá mostrar mediante gráficas la evolución de las temperaturas en el dominio del tiempo con entorno configurable.
+\item 5.8 Deberá mostrar el lugar de emplazamiento del dispositivo.
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de distintos widgets que muestren lo solicitado.
+\item Validación: se configurarán paneles con widgets para la observación de todas las variables y parámetros solicitados. Se observará que los widgets muestren la información de manera clara.
+\end{itemize}    
+  
+\item 6.1 Deberá enviar las alarmas discriminadas por efector/área.
+\item 6.2 Deberá enviar notificaciones ante desplazamientos de la temperatura por encima del rango.
+\item 6.3 Deberá enviar notificaciones ante desplazamientos de la temperatura por debajo del rango.
+ 
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de distintas alarmas para distintas áreas y dispositivos.
+\item Validación: se configurarán las alarmas de rango superior e inferior de temperaturas, se simulará un cambio de temperaturas inyectando valores de tensión en la entrada analógica. Se comprobará que el sistema envíe un alerta por Telegram correspondiente al efector y dispositivo ensayado y actualice el widget de la tabla de alarmas. 
+\end{itemize}
+
+\item 6.4 Deberá enviar notificaciones ante desconexiones del dispositivo sensor.
+\item 6.5 Deberá enviar notificaciones ante recupero de la conexión del dispositivo sensor. 
+\begin{itemize}
+\item Verificación: se observará que exista la posibilidad de configuración de distintas alarmas por desconexión del dispositivos.
+\item Validación: se simulará una desconexión con el servidor central y se observará que el cambio se refleje en los widget de estado y se envíe un alerta por Telegram.
+\end{itemize}
+ 
+\item Se deberá utilizar la gestión de compras directas para elementos con presupuesto menor a {\$10.000}.
+\item Se deberán realizar las gestiones correspondiente para realizar compras en el exterior.
+
+\begin{itemize}
+\item Verificación: se consultarán las ordenanzas municipales en lo relativo a los procedimientos de compras.
+\item Validación: se consultarán a las autoridades de la administración contable si los procesos de compras que se iniciarán, estén inscriptos en el marco regulatorio de la municipalidad.
+\end{itemize}
+
 
 \end{itemize}
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
-
-
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
