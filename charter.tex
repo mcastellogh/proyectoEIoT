@@ -1002,7 +1002,7 @@ Riesgo 4: Falla del firmware. Fallas reiteradas en el firmware del nodo, ocasion
 
 Riesgo 5: Atraso en la fabricación del PCB. Se preve que la fabricación sea derivada a un proveedor externo al país. Si bien no se tiene conocimiento de atrasos en la entrega, al ser un artículo importado, requiere de una previsión por el eventual cambio en las reglas de importación.
 \begin{itemize}
-\item Severidad (S): 10 Se considera muy grave, ya que no podrá seguir adelante el proyecto
+\item Severidad (S): 10. Se considera muy grave, ya que no podrá seguir adelante el proyecto
 \item Ocurrencia (O): 5. Se asigna este valor ya que la fabricación depende de la importación del producto. 
 \end{itemize}
 
@@ -1067,23 +1067,124 @@ Riesgo 5:  Se tratará de tener  proveedores locales sustitutos aunque represent
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
+
 Para cada uno de los requerimientos del proyecto indique:
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
+\item Req 1.1: Cada nodo estará compuesto por un microcontrolador un elemento sensor de
+temperatura y la electrónica asociada para su funcionamiento.
+	\begin{itemize}
+	\item Verificación Se observa en el diagrama esquemático del circuito la incorporación de un microcontrolador y el sensor de temperatura
+	
+	 para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
+	\item Validación Comprobación de pagina web interna valida la inclusion de un micro y el sensor
+	
+	Se observa en el diagrama esquemático del circuito la incorporación de un microcontrolador y el sensor de temperatura
 
-Verificación y validación:
+con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+\end{itemize}
+
+\item 1.2: El microcontrolador utilizado deberá estar en fase de producción activa.
+
 
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+\item Verificación La info de fábrica Espresiff asegura la produccion activa
+\item Validación comprandolo en la pag web figura si esta activo
 \end{itemize}
 
+\item 1.3 El microcontrolador deberá contener capa física WiFi.
+
+\begin{itemize}
+\item Verificación La datasheet de fábrica Espresiff asegura la wifi
+\item Validación la prueba de conexion wifi exitosa
 \end{itemize}
 
+
+
+\item 1.4 El elemento sensor deberá tener un rango de medición entre -50 y 100 ºC
+\begin{itemize}
+\item Verificación La datasheet de fábrica del sensor asegura el rango de temp
+\item Validación la prueba de funcionamiento a temperaturas entre -50 y 100 arroja valores exactos.
+\end{itemize}
+
+
+\item 1.5 El nodo deberá incluir en su circuito un filtro activo de 2º orden para la filtrar las componentes de alta frecuencia de la entrada de temperatura.
+\begin{itemize}
+\item Verificación se observa en el diagrama esquemático del circuito la incorporación de un operacional dispuesto como filtro activo de segundo orden en la entrada analógica del microcontrolador
+\item Validación se hacen pruebas de simulación para validar la efectividad del filtro.
+\end{itemize}
+
+\item 1.6 El nodo deberá incorporar indicadores luminosos de conexión con la red WiFi, conexión con el servidor central e indicador de fuera de rango de temperatura.
+
+\begin{itemize}
+\item Verificación se observa en el diagrama esquemático del circuito la incorporación de tres leds: conexión WiFi, Fuera de rango y conexión con servidor central
+\item Validación se hacen pruebas de conexión, desconexión de la red WiFi y del servidor central para validar el funcionamiento. Se simula a través de la inyección de una tensión equivalente en la entrada analógica el funcionamiento del led de fuera de rango.
+\end{itemize}
+
+\item 2.1 Deberá contener un conjunto de parámetros que identifiquen de forma unívoca el sensor dentro del sistema.
+\item 2.2 Los parámetros se deberán almacenar en memoria no volátil.
+
+
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de tales parámetros y su grabación en memoria no volátil
+\item Validación a través de al pag web del dispositivo se comprueba que existan los parámetros. Se procede al cambio de valores, reinicio del dispositivo y la visualización de los paramétros antes grabados.
+\end{itemize}
+
+\item 2.3 Deberá gestionar el procesamiento de los valores de temperatura: muestreo cada segundo y promediado cada 600 segundos.
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware para observar la inclusión del algoritmo de muestreo y promediación de la temperatura.
+\item Validación a través de la pag web del dispositivo se comprueba que se actualice una medición cada 10 minutos.
+\end{itemize}
+
+\item 2.4 Deberá incluir parámetros de calibración como offset y ganancia para su futuro contraste con un instrumento patrón.
+\item 2.7 Deberá ser capaz de conectar distintos modelos de sensores de temperatura.
+
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de la función de transferencia del sensor especificada por el fabricante del mismo.
+\item Validación a través de la pag web del dispositivo se cambian los valores de offset y ganancia y se comprueba que los valores medidos hayan cambiado. Se repite la comprobación para distintos tipos de sensores, cambiando los parámetros de la función de transferencia y comprobando los resultados de la medición.
+\end{itemize}
+
+\item 2.5 El nodo deberá incorporar una página web para configuración de parámetros específicos/calibración del sensor
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de las funciones para la activación del servidor web interno y las funciones para cada uno de los recursos que dicho servidor proveerá al navegador cliente.
+\item Validación se ingresa a la página web del dispositivo y se observan todas las funcionalidades.
+\end{itemize}
+
+
+\item 2.6 Deberá incorporar un sistema de actualización remota del firmware.
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware para observar la inclusión de las funciones para la actualización remota
+\item Validación a través de un comando RPC se le indica al dispositivo que tiene que actualizar su firmware. Una vez reiniciado, verificar el cambio de versión consultando la página web del dispositivo.
+\end{itemize}
+
+\item 3.1 La transmisión de los datos se deberá realizar con encriptación, utilizando para ello protocolos de seguridad.
+\begin{itemize}
+\item Verificación se inspecciona el código fuente del firmware y los archivos asociados para observar la inclusión de las funciones para la encriptación y el archivo de certificado correspondiente.
+\item Validación se intenta una conexión con el servidor central configurado sin certificados TLS y se comprueba que no es posible la misma. Se hace la misma prueba configurando el certificado en el servidor, comprando la conexión exitosa.
+\end{itemize}
+
+\item 3.2 El acceso al sistema de visualización deberá ser con usuario y contraseña.
+\item 3.3 El acceso a la página web del sensor deberá ser con usuario y contraseña.
+\begin{itemize}
+\item Verificación se observa que exista la posibilidad de configuración de usuarios y contraseñas en el sistema de visualización.
+\item Validación se configura en el sistema de visualización un usuario con su contraseña. Se intenta conectar al sistema de visualización con el usuario sin contraseña o con contraseña errónea, y se observa el rechazo al ingreso. Se comprueba el ingreso colocando el usuario y la contraseña correctos.
+\end{itemize}
+
+\item 4.1 El sistema de visualización debe incluir roles para distintos usuarios.
+		 \begin{enumerate}
+		 \item Rol Administrador: podrá dar alta a usuarios y cambiar sus roles.
+	     \item Rol Jefe: podrá cambiar parámetros, visualizar series de tiempo y recibir alertas.
+	     \item Rol Operador: sólo podrá visualizar series de tiempo y recibir alertas.
+	     \end{enumerate}
+	     \begin{itemize}
+\item Verificación se observa que exista la posibilidad de configuración de distintos usuarios en el sistema de visualización, y poder asignarle distintos paneles a cada uno. 
+\item Validación se configuran en el sistema de visualización roles para usuarios administrador, jefe y operador, asignándoles distintos paneles a cada uno. Se ingresa al sistema con cada uno de los usuarios configurados y se observa que los paneles correspondan a cada rol.
+\end{itemize}
+	     
+
+\end{itemize}
 Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
 
-\end{consigna}
+
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
