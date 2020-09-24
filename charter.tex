@@ -912,10 +912,10 @@ En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilid
  1.3&Selección de usuarios  &  S & I &  & A\\ \hline
  1.4&Charlas con usuarios  & P  & I &  & I\\ \hline
  1.5&Estudio de dashboards & P & I &  & \\ \hline
- 1.6&Escritura del plan de trabajo & P & A  &  & A \\ \hline
+ 1.6&Escritura del plan de trabajo & P & A  &  & I \\ \hline
  2.1&Estudio de sensores  & P &  & C  & \\ \hline
  2.2&Estudio y simulación filtro  & P  & C &  &\\ \hline 
- 2.3&Pruebas sensor filtro  &  P & A &  & A\\ \hline
+ 2.3&Pruebas sensor filtro  &  P & A &  & \\ \hline
  2.4&Investigación microcontroladores  & P  & I & C &\\ \hline
  2.5&Investigación bibliotecas  & P  & I & C &\\ \hline
  2.6&Desarrollo PCB  & P  & I & C &\\ \hline
@@ -942,7 +942,7 @@ En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilid
  6.5&Prueba alarma temperatura & P & A &  & I\\ \hline
  6.6&Prueba alarma estado & P & A &  & I \\ \hline
  7.1&Verificación de requerimientos & P & A &  & A\\ \hline
- 8.1&Escritura de manuales & P & A &  & A\\ \hline
+ 8.1&Escritura de manuales & P & A & C & I\\ \hline
  8.2&Escritura de memoria final & P & A &  & I\\ \hline
  8.3&Elaboración de la presentación & P & A &  & I\\ \hline
 
@@ -1231,28 +1231,66 @@ El plan de comunicación del proyecto es el siguiente:
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|C{2.4cm}|C{3cm}|C{1.8cm}|C{2cm}|C{2.1cm}|@{}}
+\begin{tabularx}{\linewidth}{@{}|L{2.8cm}|C{1.8cm}|C{3cm}|C{1.8cm}|C{1.8cm}|C{2.1cm}|@{}}
+%\resizebox{\textwidth}{!}{
+%\begin{tabular}{|l|c|c|c|c|c|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 ¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
+
+Definición de alcances & Director&Mostrar progresos y ver sugerencias & Semanal & email    &\authorname \\ \hline
+
+Diseño del circuito & Impulsor&Evaluación y ver sugerencias&Semanal&Reunión&\authorname\\ \hline
+
+Montaje PCB &  Cliente  & Mostrar progresos  &  Única vez  &  Reunión  & \authorname           \\ \hline
+
+Avances en firmware & Impulsor&Evaluación y ver sugerencias & Semanal &Reunión & \authorname \\ \hline
+
+
+Avances en dashboard &Impulsor, director &Evaluación y ver sugerencias & Quincenal&Acceso al sistema &            \authorname \\ \hline
+
+Config. alarmas &    Impulsor       &   Evaluación y ver sugerencias        &  Semanal &Reunión & \authorname \\ \hline
+
+Pruebas del conjunto        &     Director, cliente      &  Mostrar progresos generales&  Mensual & Reunión, acceso al sistema & \authorname \\ \hline
+
+
+                
 \end{tabularx}
+%}
 \end{table}
 
 \section{15. Gestión de compras}
 \label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
+La gestión de compras comprenderá dos partes fundamentales:
+\begin{itemize}
+\item Compras a proveedores externos.
+
+Se optará por realizar la compra de las placas de circuito impreso de los nodos a un proveedor externo ya que presenta costos realmente bajos con capacidad de entrega del producto en 7 días. La compra se hará completamente online y el pago estará a cargo del responsable del proyecto, dado que los trámites necesarios para llevar a cabo una gestión de compras en el exterior para la Municipalidad de Rosario son complejos y harían que el proyecto sufra demoras muy importantes.
+\item Compras a proveedores locales.\\
+Se aplicarán las normativas de compras de la Municipalidad de Rosario, para comprar los componentes electrónicos en proveedores locales. Se iniciarán los trámites administrativos según el monto del gasto a realizar.
+\begin{itemize}
+\item Gastos menores a \$10.0000 se harán por compra directa. El criterio adoptado será seleccionar al proveedor que ofrezca el producto especificado en el pedido al menor costo
+\item Gastos mayores a \$10.0000 se harán por licitación pública, estando a cargo de la confección de los pliegos el responsable del proyecto. 
+\end{itemize}
+\end{itemize}
+
+Statement of Work\\
+En la figura \ref{} se muestra el pliego confeccionado para la compra de los componentes electrónicos por el método de licitación pública.
+
+
+En la figura \ref{nota_pedido} se muestra la nota de pedido para la compra de los componentes electrónicos con la modalidad compra directa.
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/nota_pedido.pdf}
+\caption{\textit{Nota de pedido para compra directa}}
+\label{nota_pedido}
+\end{figure}
+
+
 
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
@@ -1291,20 +1329,56 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
 
 \begin{table}[!htpb]
 \centering
-%\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
-\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+%\begin{tabular}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
+%\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
-%}
+1.1 Definición de alcances & 1&2  &3 & &    \\ \hline
+ 1.2 Selección de efectores &   &  &  & &  \\ \hline
+ 1.3 Selección de usuarios  &   &  &  & &\\ \hline
+ 1.4 Charlas con usuarios  &   &  &  & &\\ \hline
+ 1.5 Estudio de dashboards &  &  &  & &\\ \hline
+ 1.6 Escritura del plan de trabajo &   &&  &  &\\ \hline
+ 2.1 Estudio de sensores  &  &  &  & &\\ \hline
+ 2.2 Estudio y simulación filtro  &   &&  &  &\\ \hline 
+ 2.3 Pruebas sensor filtro  &   &  &  &&\\ \hline
+ 2.4 Investigación microcontroladores  &&   &  &  &\\ \hline
+ 2.5 Investigación bibliotecas  &   &  & &  &\\ \hline
+ 2.6 Desarrollo PCB  &   &  &  & &\\ \hline
+ 2.7 Montaje PCB  &    &  &  & & \\ \hline
+ 3.1 Estudio bibliotecas WiFi  &  &  & & &\\ \hline
+ 3.2 Gestión de certificados TLS  &  &&  &  &\\ \hline
+ 3.3 Desarrollo comunicación  &  &  &&  &\\ \hline
+ 3.4 Prueba comunicación  &  &  &  &&\\ \hline
+ 3.5 Procesamiento variable  &   &  &  &&\\ \hline
+ 3.6 Desarrollo página configuración &&   &  &  &\\ \hline
+ 3.7 Prueba del conjunto  &  &   &  &&\\ \hline
+ 3.8 Depuración de errores  &  &   &  &&\\ \hline
+ 4.1 Instalación SO servidor  &  &  &  &&\\ \hline
+ 4.2 Gestión de usuarios y permisos &  &&  &  &\\ \hline
+ 5.1 Instalación dashboard  &  &  &  &&\\ \hline 
+ 5.2 Aprendizaje uso dashboard  &  &  &&  &\\ \hline
+ 5.3 Gestión usuarios dashboard  &  &&  &  &\\ \hline
+ 5.4 Creación de paneles  &  &  &  &&\\ \hline
+ 5.5 Prueba del conjunto  &  &  &  &&\\ \hline 
+ 6.1 Creación canales Telegram  &  &  &  &&\\ \hline
+ 6.2 Instalación app Telegram &  &  &  & & \\ \hline
+ 6.3 Creación reglas de alarmas &  &  & & &\\ \hline
+ 6.4 Creación reglas de estado &   &  &&  &\\ \hline
+ 6.5 Prueba alarma temperatura &   &  &&  &\\ \hline
+ 6.6 Prueba alarma estado &  &  &  & &\\ \hline
+ 7.1 Verificación de requierimientos &&  &  &  &\\ \hline
+ 8.1 Escritura de manuales &  &  &  &&\\ \hline
+ 8.2 Escritura de memoria final &  &  &  &&\\ \hline
+ 8.3 Elaboración de la presentación &  &  &  & &\\ \hline
+
+\end{tabular}%
+}
 \end{table}
 
 \section{17. Procesos de cierre}    
