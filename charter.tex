@@ -69,6 +69,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.3.0 & Primera corrección.          & 15/06/2020\\ \hline
 1.4.0 & Tercera entrega.             & 21/09/2020\\ \hline
 1.4.1 & Corrección tercera entrega.  & 23/09/2020\\ \hline
+1.5.0 & Cuarta entrega               & 25/09/2020\\ \hline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
 %		   A propósito                                                     & dd/mm/aaaa \\ \hline
@@ -111,7 +112,7 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{black}
+
 %El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
 %Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
 El presente proyecto, está dirigido a solucionar un problema existente en la Municipalidad de Rosario, donde en el área Salud Pública, funcionan  hospitales, centros de salud, droguerías y bancos de sangre. Todos estos efectores necesitan para almacenar los insumos médicos sistemas de refrigeración que provean alta confiabilidad en su prestación.
@@ -160,13 +161,12 @@ Es necesario precisar lo antes mencionado. El sistema de salud pública municipa
 \vspace{25px}
 
 %El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-\end{consigna}
 
 
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{black} 
+ 
 %Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
  
 %Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
@@ -215,47 +215,55 @@ Roberto Collelo: resulta de valiosa ayuda en el desarrollo del firmware de los s
 Silvana Pereyra: su intervención será desde el lado usuarios, ya que se muestra como una facilitadora para la implementación del sistema.
 \end{itemize}
 
-\end{consigna}
+
 
 
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{black}
+
 El propósito de este proyecto es poner en marcha un sistema de registro y visualización de temperaturas para refrigeradores críticos del área salud, con el objetivo de minimizar los riesgos de pérdida de material, mantener la calidad y eficacia médica de los productos y asegurar las condiciones legales exigidas por la autoridad.
-\end{consigna}
+
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{black}
+
 El presente proyecto incluye el desarrollo de sus partes fundamentales para que sea capaz de tener una vigilancia de temperatura de al menos 4 heladeras pertenecientes a distintos efectores de salud de la ciudad de Rosario. 
-Para ello se desarrollarán y producirán las placas de circuito impreso para los sensores de temperatura, se integrarán en un gabinete para poder ser colocados en el equipamiento a monitorear.
 
-Se instalará y configurará en un servidor con sistema operativo GNU/Linux con distribución Debian, la dashboard Thingsboard versión Community Edition que es la versión libre de licenciamientos pero que contiene todas las funcionalidades necesarias para este proyecto.
+Para ello se desarrollarán las siguientes actividades.
 
-Se configurarán reglas en la dashboard para comparar las temperaturas de los dispositivos con sus rangos para así originar las alarmas y enviar las notificaciones.
+\begin{itemize}
+\item Se producirán las placas de circuito impreso para los nodos sensores de temperatura y se integrarán en un gabinete para poder ser colocados en el equipamiento a monitorear.
 
-Se instalará una base de datos en el servidor central donde se almacenarán las temperaturas, y las configuraciones del sistema.
+\item Se instalará y configurará en un servidor con sistema operativo GNU/Linux distribución Debian, el panel de control (dashboard) seleccionada, que proveerá la visualización de los datos capturados por los sensores.
+%Thingsboard versión Community Edition que es la versión libre de licenciamientos pero que contiene todas las funcionalidades necesarias para este proyecto.
 
-Se configurarán en la dashboard paneles para que proporcionen información de temperatura y estado para cada dispositivo conectado al sistema.
+\item Se configurarán reglas en la dashboard para comparar las temperaturas de los dispositivos con sus rangos para así originar las alarmas y enviar las notificaciones.
 
-Las notificaciones de alarmas se harán por medio de la red Telegram, configurando un canal para cada efector/área.
+\item Se instalará una base de datos en el servidor central donde se almacenarán las temperaturas, y las configuraciones del sistema.
 
+\item Se configurarán en la dashboard paneles para que proporcionen información de temperatura y estado para cada dispositivo conectado al sistema.
 
-El presente proyecto no incluye la provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a Internet y las conexiones a Internet para cada área donde estarán emplazados los sensores. Tampoco incluirá certificaciones emitidas por las autoridades competentes.
-Los sensores desarrollados no son aptos para su instalación en equipos ultrafreezer (-70º).
-Los sensores no almacenarán los valores de temperaturas en memorias externas tipo SD ni en la memoria interna del microcontrolador.
-Los sensores no usarán baterías para su funcionamiento.
+\item Por medio de la red Telegram se enviarán las notificaciones de alarmas. Se configurarán canales de distribución de mensajes para cada efector/área.
+\end{itemize}
 
-\end{consigna}
+El presente proyecto no incluye.
+\begin{itemize}
+\item La provisión de la infraestructura de transporte de datos, esto es, los equipos para puntos de acceso a Internet y las conexiones a Internet para cada área donde estarán emplazados los sensores.
+\item Las certificaciones emitidas por las autoridades competentes.
+\item Los nodos sensores desarrollados no serán aptos para su instalación en equipos ultrafreezer (-70º).
+\item Los nodos sensores no almacenarán los valores de temperaturas en memorias externas tipo SD ni en la memoria interna del microcontrolador.
+\item Los nodos sensores no usarán baterías para su funcionamiento.
+\end{itemize}
+
 
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{black}
+
 Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
@@ -265,12 +273,11 @@ Para el desarrollo del presente proyecto se supone que:
 \item El gasto producido por la compra de los elementos necesarios será proporcionado por la Municipalidad de Rosario.
 \end{itemize}
 
-\end{consigna}
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{black}
+
 Se presentan a continuación los requerimientos del proyecto, los mismos están presentados en funcionales y no funcionales, donde los ítems de cada requerimiento están priorizados por orden de aparición.
 
 Estos requerimientos se obtuvieron por:
@@ -360,12 +367,11 @@ Estos requerimientos se obtuvieron por:
 \end{enumerate}
 
 
-\end{consigna}
 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{black}
+
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 Se muestran a continuación, las historias de usuarios recopiladas. Al principio se presentan dos épicas y sus correspondientes desgloses emanadas de las máximas autoridades de la empresa.
 
@@ -552,12 +558,11 @@ Ponderación:1 Prioridad:2
 Ponderación:0 Prioridad:2
 \end{itemize}
 
-\end{consigna}
+
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{black}
 \begin{itemize}
 \item Manual de uso
 \item Diagrama esquemático del circuito electrónico del nodo.
@@ -569,12 +574,11 @@ Ponderación:0 Prioridad:2
 
 \end{itemize}
 
-\end{consigna}
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{black}
+
 \begin{enumerate}
 \item Planificación general. (46 hs)
 	\begin{enumerate}
@@ -648,7 +652,7 @@ Ponderación:0 Prioridad:2
 Cantidad total de horas: 663 hs
 
 
-\end{consigna}
+
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
@@ -910,6 +914,7 @@ En el cuadro \ref{tab:resp} se muestra la matriz de asignación de responsabilid
   \supname &
   Roberto Collelo &
   \clientename \\ \hline
+ %{\rowcolor[HTML]{C0C0C0}1\multicolumn{5}{c|} Planificación general } \\ \hline
  1.1&Definición de alcances & P & A &  & A \\ \hline
  1.2&Selección de efectores &  S & I &  & A  \\ \hline
  1.3&Selección de usuarios  &  S & I &  & A\\ \hline
@@ -1267,7 +1272,11 @@ La gestión de compras comprenderá dos partes fundamentales:
 \begin{itemize}
 \item Compras a proveedores externos.
 
-Se optará por realizar la compra de las placas de circuito impreso de los nodos a un proveedor externo ya que presenta costos realmente bajos con capacidad de entrega del producto en 7 días. La compra se hará completamente online y el pago estará a cargo del responsable del proyecto, dado que los trámites necesarios para llevar a cabo una gestión de compras en el exterior para la Municipalidad de Rosario son complejos y harían que el proyecto sufra demoras muy importantes.
+Se optará por realizar la compra de las placas de circuito impreso de los nodos a un proveedor externo ya que presenta costos realmente bajos con capacidad de entrega del producto en 7 días. La compra se resolverá completamente online.
+Dado que en la Municipalidad de Rosario los trámites necesarios para llevar a cabo una gestión de compras en el exterior son complejos y harían que el proyecto sufra demoras muy importantes, se preve realizar una reunión con las autoridades tanto políticas como administrativas para lograr una agilización en esta gestión de compra. En dicha reunión se pondrá de manifiesto la importancia del proyecto en el contexto que se avecina referido al almacenamiento seguro de especialidades medicinales.
+Se estima, en el contexto mencionado, la posible recepción de importantes partidas de vacunas para el abordaje de un plan masivo de vacunación, durante el cual resultará crítico el control de su almacenamiento.
+Dada esta situación, estimamos que será prioridad para las autoridades de la Secretaría de Salud Pública, agilizar las gestiones de compra, para lograr la fluidez requerida para la consecución de los objetivos del proyecto.
+
 \item Compras a proveedores locales.\\
 Se aplicarán las normativas de compras de la Municipalidad de Rosario para adquirir los componentes electrónicos en proveedores locales. Se iniciarán los trámites administrativos según el monto del gasto a realizar.
 \begin{itemize}
