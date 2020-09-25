@@ -1126,7 +1126,7 @@ temperatura y la electrónica asociada para su funcionamiento.
 \item 2.4 Deberá incluir parámetros de calibración como offset y ganancia para su futuro contraste con un instrumento patrón.
 \item 2.7 Deberá ser capaz de conectar distintos modelos de sensores de temperatura.
 \begin{itemize}
-\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión de la función de transferencia del sensor especificada por el fabricante del mismo.
+\item Verificación: se inspeccionará el código fuente del firmware para observar la inclusión los parámetros que definan una función de transferencia que sirva para caracterizar cualquier sensor que se utilice.
 \item Validación: a través de la página web del dispositivo se cambiarán los valores de offset y ganancia y se comprobará que los valores medidos hayan cambiado. Se repetirá la comprobación para distintos tipos de sensores, cambiando los parámetros de la función de transferencia y comprobando los resultados de la medición.
 \end{itemize}
 
@@ -1164,7 +1164,7 @@ temperatura y la electrónica asociada para su funcionamiento.
 	     \end{enumerate}
 \begin{itemize}
 \item Verificación: se observará que exista la posibilidad de configuración de distintos usuarios en el sistema de visualización, y la capacidad de asignación de distintos paneles a cada uno. 
-\item Validación: se configurarán en el sistema de visualización roles para usuarios administrador, jefe y operador, y se les asignarán distintos paneles a cada uno. Se ingresará al sistema con cada uno de los usuarios configurados y se observará que los paneles correspondan a cada rol.
+\item Validación: se configurarán en el sistema de visualización roles para usuarios administrador, jefe y operador y se les asignarán distintos paneles a cada uno. Se ingresará al sistema con cada uno de los usuarios configurados y se observará que los paneles correspondan a cada rol.
 \end{itemize}
 	     
 \item 4.2 El sistema deberá prever la incorporación de otras variables a monitorear, que serán materia de desarrollos futuros de sensores.
@@ -1199,7 +1199,7 @@ temperatura y la electrónica asociada para su funcionamiento.
  
 \begin{itemize}
 \item Verificación: se observará que exista la posibilidad de configuración de distintas alarmas para distintas áreas y dispositivos.
-\item Validación: se configurarán las alarmas de rango superior e inferior de temperaturas, se simulará un cambio de temperaturas inyectando valores de tensión en la entrada analógica. Se comprobará que el sistema envíe un alerta por Telegram correspondiente al efector y dispositivo ensayado y actualice el widget de la tabla de alarmas. 
+\item Validación: se configurarán las alarmas de rango superior e inferior de temperaturas, se crearán tablas para su visualización y se simulará un cambio de temperaturas inyectando valores de tensión en la entrada analógica. Se comprobará que el sistema envíe un alerta por Telegram correspondiente al efector y dispositivo ensayado y actualice el widget de la tabla de alarmas. 
 \end{itemize}
 
 \item 6.4 Deberá enviar notificaciones ante desconexiones del dispositivo sensor.
@@ -1214,7 +1214,7 @@ temperatura y la electrónica asociada para su funcionamiento.
 
 \begin{itemize}
 \item Verificación: se consultarán las ordenanzas municipales en lo relativo a los procedimientos de compras.
-\item Validación: se consultarán a las autoridades de la administración contable si los procesos de compras que se iniciarán, estén inscriptos en el marco regulatorio de la municipalidad.
+\item Validación: se consultará a las autoridades de la administración contable si los procesos de compras que se iniciarán, están inscriptos en el marco regulatorio de la municipalidad.
 \end{itemize}
 
 
@@ -1266,14 +1266,16 @@ La gestión de compras comprenderá dos partes fundamentales:
 
 Se optará por realizar la compra de las placas de circuito impreso de los nodos a un proveedor externo ya que presenta costos realmente bajos con capacidad de entrega del producto en 7 días. La compra se hará completamente online y el pago estará a cargo del responsable del proyecto, dado que los trámites necesarios para llevar a cabo una gestión de compras en el exterior para la Municipalidad de Rosario son complejos y harían que el proyecto sufra demoras muy importantes.
 \item Compras a proveedores locales.\\
-Se aplicarán las normativas de compras de la Municipalidad de Rosario, para comprar los componentes electrónicos en proveedores locales. Se iniciarán los trámites administrativos según el monto del gasto a realizar.
+Se aplicarán las normativas de compras de la Municipalidad de Rosario para adquirir los componentes electrónicos en proveedores locales. Se iniciarán los trámites administrativos según el monto del gasto a realizar.
 \begin{itemize}
-\item Gastos menores a \$10.0000 se harán por compra directa. El criterio adoptado será seleccionar al proveedor que ofrezca el producto especificado en el pedido al menor costo
-\item Gastos mayores a \$10.0000 se harán por licitación pública, estando a cargo de la confección de los pliegos el responsable del proyecto. 
+\item Gastos menores a \$20.000 se harán por compra directa. El criterio adoptado será adjudicar la compra del producto especificado al proveedor que ofrezca el menor costo.
+\item Gastos mayores a \$20.000 se harán por licitación pública, estando a cargo de la confección de los pliegos el responsable del proyecto. 
 \end{itemize}
 \end{itemize}
 
 Statement of Work\\
+Se preve que sólo sea utilizada la modalidad compra directa, ya que se espera que ninguna supere el valor de \$ 20.000.-
+
 En la figura \ref{nota_pedido} se muestra la nota de pedido para la compra de los componentes electrónicos.
 
 En la figura \ref{compra_directa} se muestra el pliego confeccionado para la modalidad compra directa.
@@ -1370,7 +1372,7 @@ Las actividades de los procesos de cierre estarán a cargo del responsable del p
 \begin{itemize}
 \item Se analizará el grado de cumplimiento del plan de trabajo en contraste con su ejecución. Se detectarán aquellas tareas que no se cumplieron en tiempo y se hará su correspondiente evaluación a fin de tener esta información en cuenta para otros proyectos. Esta documentación será guardada en el repositorio Git del proyecto.
 
-\item Se compararán los resultados obtenidos con los requerimientos planteados en el plan original. De haber diferencias se analizarán para observar si los mismos estuvieron correctamente planteados.
+\item Se compararán los resultados obtenidos con los requerimientos planteados en el plan original. De haber diferencias se analizarán, para observar si los mismos estuvieron correctamente planteados.
 
 
 \item Se identificarán las técnicas que han sido especialmente útiles de la planificación y aquellas que no fueron de utilidad y se documentará en el repositorio de Git esta valiosa información para su uso en futuros proyectos.
