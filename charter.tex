@@ -585,7 +585,7 @@ Ponderación:0 Prioridad:2
 	\item Definiciones de alcances, requerimientos y presupuestos. (9 hs).
 	\item Selección de efectores donde colocar los prototipos. (3 hs).
 	\item Selección de usuarios que harán las pruebas del prototipo. (3 hs).
-	\item Charlas previas con los usuarios seleccionados para explicar el porqué de la implementación y así facilitar su adopción. (6 hs)
+	\item Charlas previas con los usuarios seleccionados para explicar el por qué de la implementación y así facilitar su adopción. (6 hs)
 	\item Estudio y selección de las dashboards disponibles. (10 hs).
 	\item Escritura del plan de trabajo final. (15 hs).
 	\end{enumerate}
@@ -656,7 +656,7 @@ Cantidad total de horas: 663 hs
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
-A continuación se muestra el diagrama de actividades, donde la unidad de tiempo está expresada en horas.
+En la figura \ref{act_on_node} se muestra el diagrama de actividades, donde la unidad de tiempo está expresada en horas.
 En color rojo se puede observar el camino crítico.
 
 %\begin{consigna}{red}
@@ -672,7 +672,7 @@ En color rojo se puede observar el camino crítico.
 \centering 
 \includegraphics[width=1\textwidth]{./Figuras/act_on_node_1.pdf}
 \caption{Diagrama \textit{Activity on Node}}
-\label{fig:AoN}
+\label{act_on_node}
 \end{figure}
 
 
@@ -1009,7 +1009,7 @@ Riesgo 4: Falla del firmware. Fallas reiteradas en el firmware del nodo, ocasion
 \item Ocurrencia (O): 7. Se considera este número debido a la dificultad en el desarrollo del firmware.
 \end{itemize}
 
-Riesgo 5: Atraso en la fabricación del PCB. Se preve que la fabricación sea derivada a un proveedor externo al país. Si bien no se tiene conocimiento de atrasos en la entrega, al ser un artículo importado, requiere de una previsión por un eventual cambio en las reglas de importación.
+Riesgo 5: Atraso en la fabricación del PCB. Se prevé que la fabricación sea derivada a un proveedor externo al país. Si bien no se tiene conocimiento de atrasos en la entrega, al ser un artículo importado, requiere de una previsión por un eventual cambio en las reglas de importación.
 \begin{itemize}
 \item Severidad (S): 10. Se considera muy grave, ya que no podrá seguir adelante el proyecto
 \item Ocurrencia (O): 5. Se asigna este valor ya que la compra del producto depende de su importación.
@@ -1030,12 +1030,12 @@ Riesgo 6: Error en el diseño del PCB. Se confiará la fabricación del PCB a un
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-1 & 8  & 3  &  \cellcolor[HTML]{7ab560}24   &   - &  -  &    -  \\ \hline
-2 &  10 &  4 & \cellcolor[HTML]{c94848} 40  &  9  &  1  &  \cellcolor[HTML]{7ab560}9 \\ \hline
-3 &  3 & 1  &   \cellcolor[HTML]{7ab560}3  &  -  &  -  &    -  \\ \hline
-4 & 7  & 7  &  \cellcolor[HTML]{c94848}49   &  9  & 3   & \cellcolor[HTML]{7ab560}27  \\ \hline
-5 &  10 &  5 &  \cellcolor[HTML]{c94848}50   &  4  & 4   & \cellcolor[HTML]{7ab560}16  \\ \hline
-6 & 4  & 4  &   \cellcolor[HTML]{7ab560}16  &  -  &  - &   - \\ \hline
+1. El panel de control no cubre las necesidades básicas & 8  & 3  &  \cellcolor[HTML]{7ab560}24   &   - &  -  &    -  \\ \hline
+2. Error en el diseño del circuito electrónico &  10 &  4 & \cellcolor[HTML]{c94848} 40  &  9  &  1  &  \cellcolor[HTML]{7ab560}9 \\ \hline
+3. Error en la elección del microcontrolador &  3 & 1  &   \cellcolor[HTML]{7ab560}3  &  -  &  -  &    -  \\ \hline
+4. Falla del firmware & 7  & 7  &  \cellcolor[HTML]{c94848}49   &  9  & 3   & \cellcolor[HTML]{7ab560}27  \\ \hline
+5. Atraso en la fabricación del PCB &  10 &  5 &  \cellcolor[HTML]{c94848}50   &  4  & 4   & \cellcolor[HTML]{7ab560}16  \\ \hline
+6. Error en el diseño del PCB & 4  & 4  &   \cellcolor[HTML]{7ab560}16  &  -  &  - &   - \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -1048,7 +1048,7 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
  
  Se trabajará en un plan de mitigación para los riesog 2, 4 y 5, ya que exceden el valor máximo admitido: 35.
  
-Riesgo 2: Se trabajará utilizado una placa de armado de prototipos. Luego se pasará a una placa PCB intermedia realizada en forma casera, con la ventaja de tener todos los componentes electrónicos soldados a la misma, evitando así los falsos contactos tan comunes en las placas prototipo.
+Riesgo 2: Se trabajará utilizado una placa de armado de prototipos. Luego se pasará a una placa PCB intermedia realizada en forma casera, con la ventaja de tener todos los componentes electrónicos soldados a la misma, para evitar así los falsos contactos tan comunes en las placas prototipo.
 \begin{itemize}
 \item Severidad (S): 9. No se modifica
 \item Probabilidad de ocurrencia (O): 1. Se espera que con la aplicación de este plan, el riesgo disminuya sustancialmente.
@@ -1079,7 +1079,7 @@ Se presentan a continuación los requerimientos con sus verificaciones y validac
 temperatura y la electrónica asociada para su funcionamiento.
 	\begin{itemize}
 	\item Verificación: se observará si el diagrama esquemático del circuito incorpora un microcontrolador y un sensor de temperatura.
-	\item Validación: Se comprobará si la página web interna muestra la inclusión de un microcontrolador y un sensor de temperatura.
+	\item Validación: se comprobará si la página web interna muestra la inclusión de un microcontrolador y un sensor de temperatura.
 \end{itemize}
 
 \item 1.2: El microcontrolador utilizado deberá estar en fase de producción activa.
@@ -1099,7 +1099,7 @@ temperatura y la electrónica asociada para su funcionamiento.
 \item 1.4 El elemento sensor deberá tener un rango de medición entre -50 y 100 ºC
 \begin{itemize}
 \item Verificación: se observará la hoja de datos del sensor.
-\item Validación: se hará una prueba de funcionamiento a temperaturas entre -50 y 100 para observar que los valores medidos sean los valores esperados.
+\item Validación: se hará una prueba de funcionamiento a temperaturas entre -50 y 100 para observar los valores medidos. Luego estos se contrastarán con un instrumento que posea certificación.
 \end{itemize}
 
 
@@ -1273,7 +1273,7 @@ La gestión de compras comprenderá dos partes fundamentales:
 \item Compras a proveedores externos.
 
 Se optará por realizar la compra de las placas de circuito impreso de los nodos a un proveedor externo ya que presenta costos realmente bajos con capacidad de entrega del producto en 7 días. La compra se resolverá completamente online.
-Dado que en la Municipalidad de Rosario los trámites necesarios para llevar a cabo una gestión de compras en el exterior son complejos y harían que el proyecto sufra demoras muy importantes, se preve realizar una reunión con las autoridades tanto políticas como administrativas para lograr una agilización en esta gestión de compra. En dicha reunión se pondrá de manifiesto la importancia del proyecto en el contexto que se avecina referido al almacenamiento seguro de especialidades medicinales.
+Dado que en la Municipalidad de Rosario los trámites necesarios para llevar a cabo una gestión de compras en el exterior son complejos y harían que el proyecto sufra demoras muy importantes, se prevé realizar una reunión con las autoridades tanto políticas como administrativas para lograr una agilización en esta gestión de compra. En dicha reunión se pondrá de manifiesto la importancia del proyecto en el contexto que se avecina referido al almacenamiento seguro de especialidades medicinales.
 Se estima, en el contexto mencionado, la posible recepción de importantes partidas de vacunas para el abordaje de un plan masivo de vacunación, durante el cual resultará crítico el control de su almacenamiento.
 Dada esta situación, estimamos que será prioridad para las autoridades de la Secretaría de Salud Pública, agilizar las gestiones de compra, para lograr la fluidez requerida para la consecución de los objetivos del proyecto.
 
@@ -1286,7 +1286,7 @@ Se aplicarán las normativas de compras de la Municipalidad de Rosario para adqu
 \end{itemize}
 
 Statement of Work\\
-Se preve que sólo sea utilizada la modalidad compra directa, ya que se espera que ninguna supere el valor de \$ 20.000.-
+Se prevé que sólo sea utilizada la modalidad compra directa, ya que se espera que ninguna supere el valor de \$ 20.000.-
 
 En la figura \ref{nota_pedido} se muestra la nota de pedido para la compra de los componentes electrónicos.
 
@@ -1334,16 +1334,16 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
 1.1 & Finalización &Única Vez  &\authorname  &\supname &Correo    \\ \hline
  1.2 &  Finalización & Única Vez &\authorname  &\supname, \clientename &  Correo\\ \hline
  1.3& Finalización & Única Vez &\authorname  &\supname, \clientename &  Correo\\ \hline
- 1.4&Cada reunión & Diaria &\authorname  &\supname, \clientename &  Correo\\ \hline
+ 1.4&Cada reunión & Diaria (minuta) &\authorname  &\supname, \clientename &  Correo\\ \hline
  1.5& Elección de la aplicación& Única Vez &\authorname  &Roberto Collelo  &Reunión\\ \hline
  1.6&   Cada capítulo &Semanal  &\authorname  &\supname &Correo    \\ \hline
  2.1& Elección del sensor &Única Vez &\authorname  &Roberto Collelo &Reunión\\ \hline
- 2.2& Cada simulación &Diaria&\authorname  &Roberto Collelo &Reunión\\ \hline
- 2.3&Cada prueba &Diaria&\authorname  &Roberto Collelo &Reunión\\ \hline
+ 2.2& Cada simulación &Diaria (minuta)&\authorname  &Roberto Collelo &Reunión\\ \hline
+ 2.3&Cada prueba &Diaria (minuta)&\authorname  &Roberto Collelo &Reunión\\ \hline
  2.4&Elección del dispositivo &Única Vez &\authorname  &Roberto Collelo &Reunión\\ \hline
  2.5&Biblioteca elegida &Única Vez &\authorname  &Roberto Collelo &Reunión\\ \hline
  2.6&Avance del diseño &Semanal &\authorname  &Roberto Collelo &Reunión\\ \hline
- 2.7& Cantidad de placas montadas   &Diaria&\authorname  &Roberto Collelo &Reunión\\ \hline
+ 2.7& Cantidad de placas montadas   &Diaria (minuta)&\authorname  &Roberto Collelo &Reunión\\ \hline
  3.1&Biblioteca elegida &Única Vez &\authorname  &Roberto Collelo &Reunión\\ \hline
  3.2& Cerificado generado &Única Vez &\authorname  &Roberto Collelo &Reunión\\ \hline
  3.3& Cada función probada & Semanal &\authorname  &Roberto Collelo &Reunión\\ \hline
@@ -1368,7 +1368,7 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
  7.1& Finalización & Única Vez &\authorname  &\supname, \clientename &  Reunión\\ \hline
  8.1& Cada capítulo &Semanal&\authorname  &\supname &  Correo\\ \hline
  8.2& Cada capítulo &Semanal&\authorname  &\supname &  Correo\\ \hline
- 8.3& Cada slide &diaria&\authorname  &\supname &  Correo\\ \hline
+ 8.3& Cada slide &diaria (minuta)&\authorname  &\supname &  Correo\\ \hline
 
 
 
@@ -1382,12 +1382,11 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
 Las actividades de los procesos de cierre estarán a cargo del responsable del proyecto, \authorname .
 
 \begin{itemize}
-\item Se analizará el grado de cumplimiento del plan de trabajo en contraste con su ejecución. Se detectarán aquellas tareas que no se cumplieron en tiempo y se hará su correspondiente evaluación a fin de tener esta información en cuenta para otros proyectos. Esta documentación será guardada en el repositorio Git del proyecto.
+\item Se analizará el grado de cumplimiento de la planificación en contraste con su ejecución. Se detectarán aquellas tareas que no se cumplieron en tiempo y se hará su correspondiente evaluación a fin de tener esta información en cuenta para otros proyectos. Esta documentación será guardada en el repositorio Git del proyecto.
 
-\item Se compararán los resultados obtenidos con los requerimientos planteados en el plan original. De haber diferencias se analizarán, para observar si los mismos estuvieron correctamente planteados.
+\item Se observará si fue necesario cambiar algún requerimiento durante la ejecución, en tal caso, se analizarán sus causas y se documentará esta información.
 
-
-\item Se identificarán las técnicas que han sido especialmente útiles de la planificación y aquellas que no fueron de utilidad y se documentará en el repositorio de Git esta valiosa información para su uso en futuros proyectos.
+\item Se identificarán las técnicas que han sido especialmente útiles y las que no lo han sido en todo el proceso, planificación, ejecución, seguimiento y control. Se documentará en el repositorio de Git esta valiosa información para su uso en futuros proyectos.
 
 De la misma manera, se documentarán en repositorio los problemas surgidos y sus soluciones.
 
